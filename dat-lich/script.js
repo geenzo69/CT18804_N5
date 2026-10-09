@@ -1,9 +1,5 @@
-// Mảng chứa tất cả lượt đặt sân
-// Mỗi lượt đặt là 1 object, ví dụ:
-// { court: "Sân 1", date: "20/10/2026", hour: 17, name: "An", phone: "0901234567" }
 let bookings = [];
 
-// Lấy các phần tử trong HTML (dùng id để tìm)
 const courtInput = document.getElementById("court");
 const dayInput = document.getElementById("day");
 const monthInput = document.getElementById("month");
@@ -15,19 +11,15 @@ const message = document.getElementById("message");
 const list = document.getElementById("list");
 const btnBook = document.getElementById("btnBook");
 
-// Hàm hiện thông báo (type là "error" hoặc "success")
 function showMessage(text, type) {
   message.textContent = text;
   message.className = type;
 }
 
-// Hàm kiểm tra ngày/tháng/năm có hợp lệ không
 function isValidDate(day, month, year) {
-  // Tạo ngày từ số người dùng nhập
-  // (tháng trong JavaScript bắt đầu từ 0 nên phải trừ 1)
+
   const d = new Date(year, month - 1, day);
 
-  // Nếu nhập 31/02 thì JS tự đổi thành ngày khác => khác với số đã nhập => không hợp lệ
   return (
     d.getFullYear() === year &&
     d.getMonth() === month - 1 &&
@@ -35,7 +27,7 @@ function isValidDate(day, month, year) {
   );
 }
 
-// Hàm kiểm tra ngày có nằm trong quá khứ không
+
 function isPastDate(day, month, year) {
   const chosen = new Date(year, month - 1, day);
   const today = new Date();
@@ -43,7 +35,7 @@ function isPastDate(day, month, year) {
   return chosen < today;
 }
 
-// Hàm hiện danh sách đặt sân ra trang
+
 function showList() {
   list.innerHTML = ""; // xóa danh sách cũ
 
@@ -56,9 +48,9 @@ function showList() {
   }
 }
 
-// Hàm chạy khi bấm nút "Đặt sân"
+
 function bookCourt() {
-  // 1. Lấy dữ liệu người dùng nhập
+
   const court = courtInput.value;
   const day = Number(dayInput.value);
   const month = Number(monthInput.value);
@@ -67,7 +59,7 @@ function bookCourt() {
   const name = nameInput.value.trim();
   const phone = phoneInput.value.trim();
 
-  // 2. Kiểm tra từng thứ
+
   if (!day || !month || !year) {
     showMessage("Vui lòng nhập đầy đủ ngày, tháng, năm.", "error");
     return;
@@ -93,7 +85,7 @@ function bookCourt() {
     return;
   }
 
-  // 3. Kiểm tra sân + ngày + giờ này đã có người đặt chưa
+
   const date = day + "/" + month + "/" + year;
 
   for (let i = 0; i < bookings.length; i++) {
@@ -104,7 +96,7 @@ function bookCourt() {
     }
   }
 
-  // 4. Mọi thứ hợp lệ => thêm vào mảng
+
   bookings.push({
     court: court,
     date: date,
@@ -117,5 +109,4 @@ function bookCourt() {
   showList();
 }
 
-// Khi bấm nút thì chạy hàm bookCourt
 btnBook.addEventListener("click", bookCourt);
