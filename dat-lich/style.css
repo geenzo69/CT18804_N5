@@ -24,7 +24,7 @@ input, select {
   box-sizing: border-box;
 }
 
-/* 3 ô ngày/tháng/năm nằm cùng một hàng */
+
 .date-row {
   display: flex;
   gap: 8px;
