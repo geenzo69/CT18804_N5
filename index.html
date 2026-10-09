@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Trang chủ</title>
+  <meta charset="UTF-8">
+  <title>Đặt sân cầu lông</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+  <div class="box">
+    <h2>Đặt sân cầu lông</h2>
+
+    <label>Chọn sân:</label>
+    <select id="court">
+      <option value="Sân 1">Sân 1</option>
+      <option value="Sân 2">Sân 2</option>
+      <option value="Sân 3">Sân 3</option>
+    </select>
+
+    <label>Ngày đặt:</label>
+    <div class="date-row">
+      <input type="number" id="day" placeholder="Ngày">
+      <input type="number" id="month" placeholder="Tháng">
+      <input type="number" id="year" placeholder="Năm">
+    </div>
+
+    <label>Giờ chơi:</label>
+    <select id="hour">
+      <option value="6">6:00 - 7:00</option>
+      <option value="7">7:00 - 8:00</option>
+      <option value="8">8:00 - 9:00</option>
+      <option value="9">9:00 - 10:00</option>
+      <option value="16">16:00 - 17:00</option>
+      <option value="17">17:00 - 18:00</option>
+      <option value="18">18:00 - 19:00</option>
+      <option value="19">19:00 - 20:00</option>
+      <option value="20">20:00 - 21:00</option>
+    </select>
+
+    <label>Họ tên:</label>
+    <input type="text" id="name" placeholder="Nguyễn Văn A">
+
+    <label>Số điện thoại:</label>
+    <input type="text" id="phone" placeholder="09xxxxxxxx">
+
+    <button id="btnBook">Đặt sân</button>
+
+    <p id="message"></p>
+
+  <script src="script.js"></script>
 </body>
 </html>
