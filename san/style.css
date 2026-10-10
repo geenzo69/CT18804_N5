@@ -3,3 +3,191 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+main {
+    display: block;
+
+    min-height: 100vh;
+}
+
+header {
+    background-color: #107ecd;
+    color: #fff;
+}
+
+header::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header h2 {
+    float: left;
+    line-height: 49px;
+    padding-left: 15px;
+}
+
+header ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    float: right;
+}
+
+header li {
+    padding: 15px;
+}
+
+header li:hover {
+    background-color: #f3f3f3;
+    color: #107ecd;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #272839;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+}
+
+main > .header {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 15px;
+}
+
+main > .header > img {
+    height: 260px;
+    width: 420px;
+    object-fit: cover;
+    object-position: cover;
+    border-radius: 5px;
+}
+
+main .basic {
+    width: 70vh;
+    padding: 5px;
+}
+
+main .basic > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #555555;
+}
+
+main .basic > div > p {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+}
+
+main .basic > a {
+    background-color: #107ecd;
+    border: 0;
+    padding: 15px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    float: inline-end;
+    text-decoration: none;
+}
+
+main .basic > a:hover {
+    background-color: #0768ae;
+    cursor: pointer;
+    scale: 1.025;
+}
+
+.container {
+    padding: 15px;
+    margin-left: 55px;
+    margin-right: 55px;
+}
+
+.container > span {
+    background-color: #0768ae;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #fff;
+    margin: 5px;
+}
+
+.container > p {
+    margin: 15px;
+}
+
+.container img {
+    height: 200px;
+    display: block;
+}
+
+.container > div {
+    display: flex;
+    gap: 25px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container > table {
+    margin: 15px;
+    padding: 5px;
+    table-layout: fixed;
+    font-size: large;
+}
+
+.container td:first-child {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: larger;
+    border: 1px solid #000;
+    color: #fff;
+    font-weight: bold;
+}
+
+.container th {
+    padding: 10px;;
+}
+
+.container td:not(:empty):not(:first-child) {
+    border: 1px solid #000;
+    background-color: #e32f13;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+}
+
+.container td:empty {
+    background-color: #bdbdbd;
+    border: 1px solid;
+}
+
+.container tr:nth-child(2) {
+    background-color: #0768ae;
+}
+
+.container tr:nth-child(3) {
+    background-color: #0ac8bb;
+}
+
+.container tr:nth-child(4) {
+    background-color: #b6c908;
+}
+
+.container tr:nth-child(5) {
+    background-color: #c8a80a;
+}
+
+.container tr:nth-child(6) {
+    background-color: #c96208;
+}
+
+.container tr:nth-child(7) {
+    background-color: #5b2b01;
+}
