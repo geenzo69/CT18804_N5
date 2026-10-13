@@ -56,6 +56,13 @@ main > .header {
     justify-content: center;
     gap: 50px;
     margin: 15px;
+    flex-direction: column;
+}
+
+@media (min-width: 688px) {
+    main > .header {
+        flex-direction: row;
+    }
 }
 
 main > .header > img {
@@ -64,11 +71,14 @@ main > .header > img {
     object-fit: cover;
     object-position: cover;
     border-radius: 5px;
+    margin: auto;
 }
 
 main .basic {
     width: 70vh;
     padding: 5px;
+    display: block;
+    margin: auto;
 }
 
 main .basic > div {
