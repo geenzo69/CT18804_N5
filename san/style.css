@@ -59,15 +59,9 @@ main > .header {
     flex-direction: column;
 }
 
-@media (min-width: 688px) {
-    main > .header {
-        flex-direction: row;
-    }
-}
-
 main > .header > img {
-    height: 260px;
-    width: 420px;
+    height: 150px;
+    width: 210px;
     object-fit: cover;
     object-position: cover;
     border-radius: 5px;
@@ -75,7 +69,7 @@ main > .header > img {
 }
 
 main .basic {
-    width: 70vh;
+    width: 70vw;
     padding: 5px;
     display: block;
     margin: auto;
@@ -124,7 +118,7 @@ main .basic > a:hover {
     padding-left: 15px;
     padding-right: 15px;
     color: #fff;
-    margin: 5px;
+    white-space: nowrap
 }
 
 .container > p {
@@ -132,7 +126,7 @@ main .basic > a:hover {
 }
 
 .container img {
-    height: 200px;
+    width: 60vw;
     display: block;
 }
 
@@ -200,4 +194,19 @@ main .basic > a:hover {
 
 .container tr:nth-child(7) {
     background-color: #5b2b01;
+}
+
+@media (min-width: 688px) {
+    main > .header {
+        flex-direction: row;
+    }
+
+    main > .header > img {
+        height: 260px;
+        width: 420px;
+    }
+
+    .container img {
+        width: 250px;
+    }
 }
