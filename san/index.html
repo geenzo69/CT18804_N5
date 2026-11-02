@@ -9,14 +9,26 @@
 <body>
     <header>
         <h2>Sân Cầu 247</h2>
+        <button id="menu">
+            <i data-lucide="menu"></i>
+            <i data-lucide="x" style="display: none;"></i>
+        </button>
         <nav>
             <ul>
-                <li>Trang chủ</li>
-                <li>Lịch sử đặt</li>
-                <li>Về chúng tôi</li>
+                <li class="active"><i data-lucide="house"></i>Trang chủ</li>
+                <li><i data-lucide="history"></i>Lịch sử đặt</li>
+                <li><i data-lucide="info"></i>Về chúng tôi</li>
             </ul>
         </nav>
     </header>
+
+    <nav class="mobile">
+        <ul>
+            <li class="active"><i data-lucide="house"></i>Trang chủ</li>
+            <li>Lịch sử đặt</li>
+            <li>Về chúng tôi</li>
+        </ul>
+    </nav>
 
     <main>
         <div class="header">
@@ -193,6 +205,28 @@
 
     <script>
         lucide.createIcons();
+
+        const menu = document.getElementById("menu");
+        const nav = document.querySelector("nav.mobile");
+
+        if (menu) {
+            menu.addEventListener("click", (e) => {
+                if (!nav) {
+                    return;
+                }
+
+                if (nav.style.display == "block") {
+                    nav.style.display = "none";
+                    menu.querySelector("svg.lucide-menu").style.display = "inline";
+                    menu.querySelector("svg.lucide-x").style.display = "none";
+                } else {
+                    nav.style.display = "block";
+                    menu.querySelector("svg.lucide-menu").style.display = "none";
+                    menu.querySelector("svg.lucide-x").style.display = "inline";
+                
+                }
+            });
+        }
     </script>
 </body>
 </html>
