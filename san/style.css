@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background: #f4faf6;
+    background: linear-gradient(180deg, #f4faf6 0%, #ffffff 100%);
+}
+
+main {
+    display: block;
+    min-height: 100vh;
+}
+
+header {
+    color: #178a5b;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 7.5px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    border-bottom: #178a5b solid 2px;
+}
+
+header #menu {
+    border: 0;
+    padding: 3px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    color: #178a5b;
+}
+
+header #menu:hover {
+    cursor: pointer;
+    color: #0f6e48
+}
+
+header nav {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    float: right;
+}
+
+nav li {
+    padding: 10px;
+    font-weight: bold;
+    color: #374151;
+    white-space: nowrap;
+}
+
+nav li svg {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+nav li:hover {
+    cursor: pointer;
+    color: #0f6e48;
+    background-color: #ecfdf5;
+    border-radius: 5px;
+}
+
+nav li.active {
+    color: #0f6e48;
+    background-color: #dcfce7;
+    border-bottom: 2px solid #178a5b;
+}
+
+nav.mobile {
+    display: none;
+    position: fixed;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+
+nav.mobile ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    background-color: #14352a;
+    color: #d1fae5;
+    text-align: center;
+    padding: 25px;
+}
+
+main > .header {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 15px;
+    flex-direction: column;
+}
+
+main > .header > img {
+    height: 150px;
+    width: 210px;
+    object-fit: cover;
+    object-position: cover;
+    border-radius: 5px;
+    margin: auto;
+}
+
+main .basic {
+    width: 70vw;
+    padding: 5px;
+    display: block;
+    margin: auto;
+}
+
+main .basic > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #4b5563;
+}
+
+main .basic > div > p {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+}
+
+main .basic > a {
+    background-color: #178a5b;
+    border: 0;
+    padding: 15px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    float: inline-end;
+    text-decoration: none;
+}
+
+main .basic > a:hover {
+    background-color: #0f6e48;
+    cursor: pointer;
+    scale: 1.025;
+}
+
+.container {
+    padding: 15px;
+}
+
+.container > span {
+    background-color: #178a5b;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #fff;
+    white-space: nowrap
+}
+
+.container > p {
+    margin: 15px;
+}
+
+.container img {
+    width: 60vw;
+    display: block;
+}
+
+.container > div {
+    display: flex;
+    gap: 25px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container > table {
+    margin: 15px;
+    padding: 5px;
+    table-layout: fixed;
+    font-size: large;
+}
+
+.container td:first-child {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: larger;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: bold;
+}
+
+.container th {
+    padding: 10px;;
+}
+
+.container td:not(:empty):not(:first-child) {
+    border: 1px solid #fff;
+    background-color: #dc2626;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+}
+
+.container td:empty {
+    background-color: #e5e7eb;
+    border: 1px solid #fff;
+}
+
+.container tr:nth-child(2) {
+    background-color: #178a5b;
+}
+
+.container tr:nth-child(3) {
+    background-color: #0d9488;
+}
+
+.container tr:nth-child(4) {
+    background-color: #65a30d;
+}
+
+.container tr:nth-child(5) {
+    background-color: #ca8a04;
+}
+
+.container tr:nth-child(6) {
+    background-color: #ea580c;
+}
+
+.container tr:nth-child(7) {
+    background-color: #78350f;
+}
+
+@media (min-width: 688px) {
+    main > .header {
+        flex-direction: row;
+    }
+
+    main > .header > img {
+        height: 260px;
+        width: 420px;
+    }
+
+    .container img {
+        width: 250px;
+    }
+
+    header #menu {
+        display: none;
+    }
+
+    header nav {
+        display: block;
+    }
+}
