@@ -3,3 +3,149 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    width:95%;
+    margin:0px auto;
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color:gray;
+    padding: 25px 10px;
+    /* border: 5px solid red; */
+}
+.header::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.header__img--logo{
+    width:100px;
+    border-radius: 50%;
+}
+.header__title{
+    flex:7;
+    text-align: center;
+    font-size: 50px;
+}
+.header__nav{
+    flex:3;
+    display:flex;
+    align-items:center;
+    width:100%;
+}
+
+.header__nav-link{
+    flex:1;
+    width: 15%;
+    margin: 0px 10px;
+    text-align: center;
+    background-color: blue;
+    display: inline-block;
+    padding: 15px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border-radius: 10px;
+}
+
+.main{
+    display:flex;
+    background-color: lightgray;
+    gap:30px;
+}
+
+.main__flex-left{
+    flex:1;
+    border:5px solid grey;
+}
+
+.main__left-article{
+    font-size: 25px;
+    margin:5px;
+    margin-bottom:8px;
+}
+
+.main__left-article h2{
+    font-size: 35px;
+}
+
+.main__navbar{
+    /* border: 5px solid red; */
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    gap:20px;
+    flex-wrap: wrap;
+}
+
+.main__flex-middle{
+    flex:3;
+    display:flex;
+    border:5px solid grey;
+    flex-direction: column;
+}
+
+.main__navbar--images{
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    align-self: center;
+}
+
+
+.main__navbar-desc{
+    text-align: center;
+}
+.main__navbar-info{
+    /* border: 5px dotted red; */
+    background-color:gray;
+}
+.main__flex-right{
+    flex:1;
+    border:5px solid grey;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+.main__form{
+    flex:1;
+}
+.main__right-article{
+    text-align: left;
+    flex:4;
+    border-top: 5px solid darkslategray;
+}
+.main__right-article-funfact{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:5px;
+    text-align: left;
+    font-size: 16px;
+}
+.main__right-article-funfact p {
+    text-align: left;
+}
+.main__right-article-image{
+
+}
+@media screen and (min-width: 481px) and (max-width:600px) {
+    .main{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+
+.footer__article{
+    background-color: grey;
+    text-align: right;
+}
