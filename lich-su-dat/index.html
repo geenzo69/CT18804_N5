@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Lịch sử đặt</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lịch sử đặt sân</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+  <header class="header">
+
+  </header>
+
+  <main class="container">
+    <h1>Lịch sử đặt sân</h1>
+
+    <!-- Thống kê nhanh -->
+    <section class="stats">
+      <div class="stat-box">
+        <span>Tổng lượt đặt</span>
+        <strong id="stat-total">0</strong>
+      </div>
+      <div class="stat-box">
+        <span>Sắp tới</span>
+        <strong id="stat-upcoming">0</strong>
+      </div>
+      <div class="stat-box">
+        <span>Đã hoàn thành</span>
+        <strong id="stat-done">0</strong>
+      </div>
+      <div class="stat-box">
+        <span>Tổng chi tiêu</span>
+        <strong id="stat-money">0đ</strong>
+      </div>
+    </section>
+
+    <!-- Bộ lọc -->
+    <section class="filter">
+      <input type="text" id="search" placeholder="Tìm theo mã đặt hoặc tên sân">
+
+      <select id="filter-status">
+        <option value="all">Tất cả trạng thái</option>
+        <option value="pending">Chờ xác nhận</option>
+        <option value="confirmed">Đã xác nhận</option>
+        <option value="done">Đã hoàn thành</option>
+        <option value="cancelled">Đã hủy</option>
+      </select>
+
+      <input type="date" id="filter-date">
+
+      <button type="button" id="btn-reset">Xóa lọc</button>
+    </section>
+
+    <!-- Danh sách đặt sân -->
+    <section class="list">
+      <div class="row row-head">
+        <div>Mã đặt</div>
+        <div>Sân</div>
+        <div>Ngày</div>
+        <div>Giờ</div>
+        <div>Giá</div>
+        <div>Trạng thái</div>
+        <div>Thao tác</div>
+      </div>
+
+      <div id="booking-list"></div>
+
+      <p id="empty-msg" class="empty" hidden>Không có lượt đặt nào phù hợp. Thử đổi bộ lọc xem sao.</p>
+    </section>
+
+    <div class="pagination" id="pagination"></div>
+  </main>
+
+  <!-- Hộp thoại chi tiết -->
+  <dialog id="detail-dialog">
+    <h2>Chi tiết lượt đặt <span id="detail-id"></span></h2>
+    <dl class="detail-grid" id="detail-body"></dl>
+    <div class="dialog-actions">
+      <button type="button" id="btn-close">Đóng</button>
+    </div>
+  </dialog>
+
+  <script src=""></script>
 </body>
 </html>
