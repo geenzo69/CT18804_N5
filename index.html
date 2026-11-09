@@ -4,17 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/global.css">
+    <script type="module" src="/assets/scripts/header.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <title>Trang chủ</title>
 </head>
 <body>
-    <header class="header">
-        <img class="header__img--logo" src="index_images/ctulogo.png" alt="Logo">
-        <h1 class="header__title"><b>Badminton Reservation Service</b></h1>
-        <nav class="header__nav"> 
-            <a class="header__nav-link" href="lich-su-dat/index.html" >Reservation History </a>
-            <a class="header__nav-link" href="ve-chung-toi/index.html">About us </a>
+    <header>
+        <a href="/"><img draggable="false" class="logo" src="/assets/images/logo.png" alt="Logo"></a>
+        <button id="menu">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-x" style="display: none;"></i>
+        </button>
+        <nav>
+            <ul>
+                <li class="active">
+                    <a href="/">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="/lich-su-dat">Lịch sử đặt</a>
+                </li>
+                <li>
+                    <a href="/ve-chung-toi">Về chúng tôi</a>
+                </li>
+            </ul>
         </nav>
+
+        <a class="login-btn" href="/">Đăng nhập</a>
+        <div class="user-menu">
+            <h5>Hoàng Văn A</h5>
+            <img height="32px" src="https://avatars.githubusercontent.com/u/107747605?v=4">
+        </div>
     </header>
+
+    <nav class="mobile">
+        <ul>
+            <li class="active">
+                <a href="/">Trang chủ</a>
+            </li>
+            <li>
+                <a href="/lich-su-dat">Lịch sử đặt</a>
+            </li>
+            <li>
+                <a href="/ve-chung-toi">Về chúng tôi</a>
+            </li>
+
+            <div class="user-menu">
+                <h5>Hoàng Văn A</h5>
+                <img height="32px" src="https://avatars.githubusercontent.com/u/107747605?v=4">
+            </div>
+
+            <a class="login-btn" href="/">Đăng nhập</a>
+        </ul>
+    </nav>
+
     <main class="main">
         <div class="main__flex-left">
             <article class="main__left-article">
@@ -28,31 +72,31 @@
         <div class="main__flex-middle">
             <ul class="main__navbar">
                     <a class="main__navbar-info" href="https://google.com">
-                        <img class="main__navbar--images" src="index_images/San1.jpg" alt="San2">
+                        <img class="main__navbar--images" src="images/San1.jpg" alt="San2">
                         <p class="main__navbar-desc"><b>Sân 1</b></p>
                         <p class="main__navbar-desc"><b>Sân 1 - Thông tin</b></p>
                         <p class="main__navbar-desc"><b>Sân 1 - Còn chỗ</b></p>
                     </a>
                     <a class="main__navbar-info" href="https://google.com">
-                        <img class="main__navbar--images" src="index_images/San2.jpg" alt="San2">
+                        <img class="main__navbar--images" src="images/San2.jpg" alt="San2">
                         <p class="main__navbar-desc"><b>Sân 2</b></p>
                         <p class="main__navbar-desc"><b>Sân 2 - Thông tin</b></p>
                         <p class="main__navbar-desc"><b>Sân 2 - Còn chỗ</b></p>
                     </a>
                     <a class="main__navbar-info" href="https://google.com">
-                        <img class="main__navbar--images" src="index_images/San3.jpg" alt="San3">
+                        <img class="main__navbar--images" src="images/San3.jpg" alt="San3">
                         <p class="main__navbar-desc"><b>Sân 3</b></p>
                         <p class="main__navbar-desc"><b>Sân 3 - Thông tin</b></p>
                         <p class="main__navbar-desc"><b>Sân 3 - Còn chỗ</b></p>
                     </a>
                     <a class="main__navbar-info" href="https://google.com">
-                        <img class="main__navbar--images" src="index_images/San4.jpg" alt="San4">
+                        <img class="main__navbar--images" src="images/San4.jpg" alt="San4">
                         <p class="main__navbar-desc"><b>Sân 4</b></p>
                         <p class="main__navbar-desc"><b>Sân 4 - Thông tin</b></p>
                         <p class="main__navbar-desc"><b>Sân 4 - Còn chỗ</b></p>
                     </a>
                     <a class="main__navbar-info" href="https://google.com">
-                        <img class="main__navbar--images" src="index_images/San5.jpg" alt="San5">
+                        <img class="main__navbar--images" src="images/San5.jpg" alt="San5">
                         <p class="main__navbar-desc"><b>Sân 5</b></p>
                         <p class="main__navbar-desc"><b>Sân 5 - Thông tin</b></p>
                         <p class="main__navbar-desc"><b>Sân 5 - Còn chỗ</b></p>
@@ -71,17 +115,17 @@
                 <h2>Some fun facts about badminton:</h2>
                 <section class="main__right-article-funfact">
                     <p>1. Badminton is surprising fast: A badminton smash has been recorded at over 500 km/h in professional competitions and speed tests.</p>
-                    <img class="main__right-article-image" src="index_images/fastestbadminton.jpg" alt="FastBadminton">
+                    <img class="main__right-article-image" src="images/fastestbadminton.jpg" alt="FastBadminton">
                 </section>
                 <section class="main__right-article-funfact">
                     <p>2. Shuttlecocks don't fly like balls: Their aerodynamic design makes them slow down rapidly after being hit, which creates badminton's distinctive playing style.</p>
-                    <img class="main__right-article-image" src="index_images/weirdshuttleco.jpg" alt="Shuttlecocks are not balls">
+                    <img class="main__right-article-image" src="images/weirdshuttleco.jpg" alt="Shuttlecocks are not balls">
                 </section>
             </article>
         </div>
     </main>
     <footer>
-        <p class="footer__article"> Made by V</p>
+        © 2026 - Nhóm 5
     </footer>
 </body>
 </html>

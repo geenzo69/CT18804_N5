@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background: #f4faf6;
+    background: linear-gradient(180deg, #f4faf6 0%, #ffffff 100%);
+}
+
+main {
+    display: block;
+    min-height: 100vh;
+}
+
+header {
+    color: #178a5b;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 7.5px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    border-bottom: #178a5b solid 2px;
+}
+
+header #menu {
+    border: 0;
+    padding: 3px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    color: #178a5b;
+}
+
+header #menu:hover {
+    cursor: pointer;
+    color: #0f6e48
+}
+
+header nav {
+    display: none;
+}
+
+.logo {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    float: right;
+}
+
+nav li {
+    padding: 10px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+}
+
+nav li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #374151;
+}
+
+nav li svg {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+nav li:hover {
+    cursor: pointer;
+    color: #0f6e48;
+    background-color: #ecfdf5;
+    border-radius: 5px;
+}
+
+nav li.active {
+    color: #0f6e48;
+    background-color: #dcfce7;
+    border-bottom: 2px solid #178a5b;
+}
+
+nav.mobile {
+    display: none;
+    position: fixed;
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+}
+
+nav.mobile ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 15px;
+    color: #374151;
+}
+
+header .user-menu {
+    display: none;
+}
+
+header .login-btn {
+    display: none;
+}
+
+.user-menu img {
+    border-radius: 100%;
+    
+}
+
+.login-btn {
+    background-color: #178a5b;
+    border: 0;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    float: inline-end;
+    text-decoration: none;
+}
+
+.mobile .login-btn {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.login-btn:hover {
+    color: #178a5b;
+    background-color: #fdfdfd;
+    outline: 2px solid #178a5b;
+    cursor: pointer;
+}
+
+.is-logged-in.login-btn {
+    display: none;
+}
+
+.user-menu {
+    display: none;
+}
+
+.mobile .user-menu.is-logged-in {
+    display: flex;
+}
+
+footer {
+    background-color: #202523;
+    color: #d1fae5;
+    padding: 25px;
+    text-align: center;
+}
+
+@media (min-width: 688px) {
+    main > .header {
+        flex-direction: row;
+    }
+
+    main > .header > img {
+        height: 260px;
+        width: 420px;
+    }
+
+    .container img {
+        width: 250px;
+    }
+
+    header #menu {
+        display: none;
+    }
+
+    header nav {
+        display: block;
+    }
+
+    header .login-btn {
+        display: block;
+    }
+
+    header .user-menu.is-logged-in {
+        display: flex;
+    }
+
+    nav.mobile { 
+        display: none !important;
+    }
+
+    .double {
+        display: flex;
+    }
+
+    .double .container:first-child {
+        width: 70%;
+    }
+}

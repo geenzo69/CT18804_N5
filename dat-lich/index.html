@@ -1,52 +1,112 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Đặt sân cầu lông</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Đặt sân cầu lông</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/global.css">
+    <script type="module" src="/assets/scripts/header.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
 
-  <div class="box">
-    <h2>Đặt sân cầu lông</h2>
+    <header>
+        <a href="/"><img draggable="false" class="logo" src="/assets/images/logo.png" alt="Logo"></a>
+        <button id="menu">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-x" style="display: none;"></i>
+        </button>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="/lich-su-dat">Lịch sử đặt</a>
+                </li>
+                <li>
+                    <a href="/ve-chung-toi">Về chúng tôi</a>
+                </li>
+            </ul>
+        </nav>
 
-    <label>Chọn sân:</label>
-    <select id="court">
-      <option value="Sân 1">Sân 1</option>
-      <option value="Sân 2">Sân 2</option>
-      <option value="Sân 3">Sân 3</option>
-    </select>
+        <a class="login-btn" href="/">Đăng nhập</a>
+        <div class="user-menu">
+            <h5>Hoàng Văn A</h5>
+            <img height="32px" src="https://avatars.githubusercontent.com/u/107747605?v=4">
+        </div>
+    </header>
 
-    <label>Ngày đặt:</label>
-    <div class="date-row">
-      <input type="number" id="day" placeholder="Ngày">
-      <input type="number" id="month" placeholder="Tháng">
-      <input type="number" id="year" placeholder="Năm">
+    <nav class="mobile">
+        <ul>
+            <li>
+                <a href="/">Trang chủ</a>
+            </li>
+            <li>
+                <a href="/lich-su-dat">Lịch sử đặt</a>
+            </li>
+            <li>
+                <a href="/ve-chung-toi">Về chúng tôi</a>
+            </li>
+
+            <div class="user-menu">
+                <h5>Hoàng Văn A</h5>
+                <img height="32px" src="https://avatars.githubusercontent.com/u/107747605?v=4">
+            </div>
+
+            <a class="login-btn" href="/">Đăng nhập</a>
+        </ul>
+    </nav>
+
+    <div class="box">
+        <h2>Đặt sân cầu lông</h2>
+
+        <label>Chọn sân:</label>
+        <select id="court">
+            <option value="Sân 1">Sân 1</option>
+            <option value="Sân 2">Sân 2</option>
+            <option value="Sân 3">Sân 3</option>
+        </select>
+
+        <label>Ngày đặt:</label>
+        <div class="date-row">
+            <input type="number" id="day" placeholder="Ngày">
+            <input type="number" id="month" placeholder="Tháng">
+            <input type="number" id="year" placeholder="Năm">
+        </div>
+
+        <label>Giờ chơi:</label>
+        <select id="hour">
+            <option value="6">6:00 - 7:00</option>
+            <option value="7">7:00 - 8:00</option>
+            <option value="8">8:00 - 9:00</option>
+            <option value="9">9:00 - 10:00</option>
+            <option value="16">16:00 - 17:00</option>
+            <option value="17">17:00 - 18:00</option>
+            <option value="18">18:00 - 19:00</option>
+            <option value="19">19:00 - 20:00</option>
+            <option value="20">20:00 - 21:00</option>
+        </select>
+
+        <label>Họ tên:</label>
+        <input type="text" id="name" placeholder="Nguyễn Văn A">
+
+        <label>Số điện thoại:</label>
+        <input type="text" id="phone" placeholder="09xxxxxxxx">
+
+        <button id="btnBook">Đặt sân</button>
+
+        <p id="message"></p>
     </div>
+    <script src="script.js"></script>
 
-    <label>Giờ chơi:</label>
-    <select id="hour">
-      <option value="6">6:00 - 7:00</option>
-      <option value="7">7:00 - 8:00</option>
-      <option value="8">8:00 - 9:00</option>
-      <option value="9">9:00 - 10:00</option>
-      <option value="16">16:00 - 17:00</option>
-      <option value="17">17:00 - 18:00</option>
-      <option value="18">18:00 - 19:00</option>
-      <option value="19">19:00 - 20:00</option>
-      <option value="20">20:00 - 21:00</option>
-    </select>
-
-    <label>Họ tên:</label>
-    <input type="text" id="name" placeholder="Nguyễn Văn A">
-
-    <label>Số điện thoại:</label>
-    <input type="text" id="phone" placeholder="09xxxxxxxx">
-
-    <button id="btnBook">Đặt sân</button>
-
-    <p id="message"></p>
-
-  <script src="script.js"></script>
+    <footer>
+        © 2026 - Nhóm 5
+    </footer>
 </body>
+
 </html>

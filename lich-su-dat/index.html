@@ -1,86 +1,138 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lịch sử đặt sân</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch sử đặt sân</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/global.css">
+    <script type="module" src="/assets/scripts/header.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
+    <header>
+        <a href="/"><img draggable="false" class="logo" src="/assets/images/logo.png" alt="Logo"></a>
+        <button id="menu">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-x" style="display: none;"></i>
+        </button>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Trang chủ</a>
+                </li>
+                <li class="active">
+                    <a href="/lich-su-dat">Lịch sử đặt</a>
+                </li>
+                <li>
+                    <a href="/ve-chung-toi">Về chúng tôi</a>
+                </li>
+            </ul>
+        </nav>
 
-  <header class="header">
+        <a class="login-btn" href="/">Đăng nhập</a>
+        <div class="user-menu">
+            <h5>Hoàng Văn A</h5>
+            <img height="32px" src="https://avatars.githubusercontent.com/u/107747605?v=4">
+        </div>
+    </header>
 
-  </header>
+    <nav class="mobile">
+        <ul>
+            <li>
+                <a href="/">Trang chủ</a>
+            </li>
+            <li class="active">
+                <a href="/lich-su-dat">Lịch sử đặt</a>
+            </li>
+            <li>
+                <a href="/ve-chung-toi">Về chúng tôi</a>
+            </li>
 
-  <main class="container">
-    <h1>Lịch sử đặt sân</h1>
+            <div class="user-menu">
+                <h5>Hoàng Văn A</h5>
+                <img height="32px" src="https://avatars.githubusercontent.com/u/107747605?v=4">
+            </div>
 
-    <!-- Thống kê nhanh -->
-    <section class="stats">
-      <div class="stat-box">
-        <span>Tổng lượt đặt</span>
-        <strong id="stat-total">0</strong>
-      </div>
-      <div class="stat-box">
-        <span>Sắp tới</span>
-        <strong id="stat-upcoming">0</strong>
-      </div>
-      <div class="stat-box">
-        <span>Đã hoàn thành</span>
-        <strong id="stat-done">0</strong>
-      </div>
-      <div class="stat-box">
-        <span>Tổng chi tiêu</span>
-        <strong id="stat-money">0đ</strong>
-      </div>
-    </section>
+            <a class="login-btn" href="/">Đăng nhập</a>
+        </ul>
+    </nav>
 
-    <!-- Bộ lọc -->
-    <section class="filter">
-      <input type="text" id="search" placeholder="Tìm theo mã đặt hoặc tên sân">
+    <main class="container">
+        <h1>Lịch sử đặt sân</h1>
 
-      <select id="filter-status">
-        <option value="all">Tất cả trạng thái</option>
-        <option value="pending">Chờ xác nhận</option>
-        <option value="confirmed">Đã xác nhận</option>
-        <option value="done">Đã hoàn thành</option>
-        <option value="cancelled">Đã hủy</option>
-      </select>
+        <!-- Thống kê nhanh -->
+        <section class="stats">
+            <div class="stat-box">
+                <span>Tổng lượt đặt</span>
+                <strong id="stat-total">0</strong>
+            </div>
+            <div class="stat-box">
+                <span>Sắp tới</span>
+                <strong id="stat-upcoming">0</strong>
+            </div>
+            <div class="stat-box">
+                <span>Đã hoàn thành</span>
+                <strong id="stat-done">0</strong>
+            </div>
+            <div class="stat-box">
+                <span>Tổng chi tiêu</span>
+                <strong id="stat-money">0đ</strong>
+            </div>
+        </section>
 
-      <input type="date" id="filter-date">
+        <!-- Bộ lọc -->
+        <section class="filter">
+            <input type="text" id="search" placeholder="Tìm theo mã đặt hoặc tên sân">
 
-      <button type="button" id="btn-reset">Xóa lọc</button>
-    </section>
+            <select id="filter-status">
+                <option value="all">Tất cả trạng thái</option>
+                <option value="pending">Chờ xác nhận</option>
+                <option value="confirmed">Đã xác nhận</option>
+                <option value="done">Đã hoàn thành</option>
+                <option value="cancelled">Đã hủy</option>
+            </select>
 
-    <!-- Danh sách đặt sân -->
-    <section class="list">
-      <div class="row row-head">
-        <div>Mã đặt</div>
-        <div>Sân</div>
-        <div>Ngày</div>
-        <div>Giờ</div>
-        <div>Giá</div>
-        <div>Trạng thái</div>
-        <div>Thao tác</div>
-      </div>
+            <input type="date" id="filter-date">
 
-      <div id="booking-list"></div>
+            <button type="button" id="btn-reset">Xóa lọc</button>
+        </section>
 
-      <p id="empty-msg" class="empty" hidden>Không có lượt đặt nào phù hợp. Thử đổi bộ lọc xem sao.</p>
-    </section>
+        <!-- Danh sách đặt sân -->
+        <section class="list">
+            <div class="row row-head">
+                <div>Mã đặt</div>
+                <div>Sân</div>
+                <div>Ngày</div>
+                <div>Giờ</div>
+                <div>Giá</div>
+                <div>Trạng thái</div>
+                <div>Thao tác</div>
+            </div>
 
-    <div class="pagination" id="pagination"></div>
-  </main>
+            <div id="booking-list"></div>
 
-  <!-- Hộp thoại chi tiết -->
-  <dialog id="detail-dialog">
-    <h2>Chi tiết lượt đặt <span id="detail-id"></span></h2>
-    <dl class="detail-grid" id="detail-body"></dl>
-    <div class="dialog-actions">
-      <button type="button" id="btn-close">Đóng</button>
-    </div>
-  </dialog>
+            <p id="empty-msg" class="empty" hidden>Không có lượt đặt nào phù hợp. Thử đổi bộ lọc xem sao.</p>
+        </section>
 
-  <script src=""></script>
+        <div class="pagination" id="pagination"></div>
+    </main>
+
+    <!-- Hộp thoại chi tiết -->
+    <dialog id="detail-dialog">
+        <h2>Chi tiết lượt đặt <span id="detail-id"></span></h2>
+        <dl class="detail-grid" id="detail-body"></dl>
+        <div class="dialog-actions">
+            <button type="button" id="btn-close">Đóng</button>
+        </div>
+    </dialog>
+
+    <footer>
+        © 2026 - Nhóm 5
+    </footer>
 </body>
+
 </html>

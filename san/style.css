@@ -1,105 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    background: #f4faf6;
-    background: linear-gradient(180deg, #f4faf6 0%, #ffffff 100%);
-}
-
-main {
-    display: block;
-    min-height: 100vh;
-}
-
-header {
-    color: #178a5b;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    padding: 7.5px;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    border-bottom: #178a5b solid 2px;
-}
-
-header #menu {
-    border: 0;
-    padding: 3px;
-    width: 32px;
-    height: 32px;
-    background: none;
-    color: #178a5b;
-}
-
-header #menu:hover {
-    cursor: pointer;
-    color: #0f6e48
-}
-
-header nav {
-    display: none;
-}
-
-nav ul {
-    display: flex;
-    gap: 10px;
-    list-style: none;
-    float: right;
-}
-
-nav li {
-    padding: 10px;
-    font-weight: bold;
-    color: #374151;
-    white-space: nowrap;
-}
-
-nav li svg {
-    width: 18px;
-    height: 18px;
-    vertical-align: middle;
-    margin-right: 6px;
-}
-
-nav li:hover {
-    cursor: pointer;
-    color: #0f6e48;
-    background-color: #ecfdf5;
-    border-radius: 5px;
-}
-
-nav li.active {
-    color: #0f6e48;
-    background-color: #dcfce7;
-    border-bottom: 2px solid #178a5b;
-}
-
-nav.mobile {
-    display: none;
-    position: fixed;
-    background-color: #ffffff;
-    width: 100%;
-    height: 100%;
-}
-
-nav.mobile ul {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-}
-
-footer {
-    background-color: #14352a;
-    color: #d1fae5;
-    text-align: center;
-    padding: 25px;
-}
-
 main > .header {
     display: flex;
     justify-content: center;
@@ -112,7 +10,6 @@ main > .header > img {
     height: 150px;
     width: 210px;
     object-fit: cover;
-    object-position: cover;
     border-radius: 5px;
     margin: auto;
 }
@@ -165,16 +62,45 @@ main .basic > a:hover {
     padding-left: 15px;
     padding-right: 15px;
     color: #fff;
-    white-space: nowrap
+    white-space: nowrap;
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
 .container > p {
     margin: 15px;
+    white-space: pre-line;
 }
 
-.container img {
+.container > p > b {
+    color: #178a5b;
+}
+
+.container > .featured-img {
     width: 60vw;
+    height: 60vh;
     display: block;
+    margin: auto;
+    border: 2px solid #dfe0e0;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.container > .img-list {
+    display: flex;
+    justify-content: center;
+}
+
+.container > .img-list > img {
+    width: 15rem;
+    height: 8rem;
+    border: 2px solid #dfe0e0;
+    object-fit: cover;
+}
+
+.container > .img-list > img:hover {
+    cursor: pointer;
+    border: 2px solid #178a5b;
 }
 
 .container > div {
@@ -203,7 +129,7 @@ main .basic > a:hover {
 }
 
 .container th {
-    padding: 10px;;
+    padding: 10px;
 }
 
 .container td:not(:empty):not(:first-child) {
@@ -243,6 +169,10 @@ main .basic > a:hover {
     background-color: #78350f;
 }
 
+.container tr:nth-child(8) {
+    background-color: #120802;
+}
+
 @media (min-width: 688px) {
     main > .header {
         flex-direction: row;
@@ -257,11 +187,11 @@ main .basic > a:hover {
         width: 250px;
     }
 
-    header #menu {
-        display: none;
+    .double {
+        display: flex;
     }
 
-    header nav {
-        display: block;
+    .double .container:first-child {
+        width: 70%;
     }
 }

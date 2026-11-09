@@ -1,0 +1,128 @@
+[
+    {
+        "id": "1",
+        "name": "Sân Cầu Lông Hoàng Long",
+        "description": "Sân Cầu Lông Hoàng Long là điểm đến dành cho những người yêu thích bộ môn cầu lông, từ người mới bắt đầu đến những tay vợt có kinh nghiệm.\n\nKhông chỉ là nơi rèn luyện sức khỏe, sân còn mang đến không gian giao lưu, kết nối cộng đồng và tận hưởng những trận cầu đầy hào hứng cùng bạn bè, đồng đội.\n\nDù bạn muốn tập luyện thường xuyên, nâng cao kỹ năng hay đơn giản là thư giãn sau một ngày bận rộn, Hoàng Long luôn là lựa chọn đáng cân nhắc để thỏa mãn niềm đam mê cầu lông.",
+        "address": "393/5 Khu Vực 6, Tân An, Cần Thơ, Việt Nam",
+        "activeDays": [2, 3, 4, 5, 6, 7],
+        "hotline": "0909080378",
+        "email": "contact@caulonghoanglong.vn",
+        "images": ["/assets/images/courts/cau-long-hoang-long/1.webp"],
+        "cover": "/assets/images/courts/cau-long-hoang-long/cover.webp",
+        "pricing": [
+            {
+                "id": "1",
+                "startedAt": "05:00",
+                "endedAt": "07:00",
+                "price": 150000
+            },
+            {
+                "id": "2",
+                "startedAt": "07:00",
+                "endedAt": "09:00",
+                "price": 150001
+            },
+            {
+                "id": "3",
+                "startedAt": "09:00",
+                "endedAt": "11:00",
+                "price": 150001
+            },
+            {
+                "id": "4",
+                "startedAt": "13:00",
+                "endedAt": "15:00",
+                "price": 150001
+            },
+            {
+                "id": "5",
+                "startedAt": "15:00",
+                "endedAt": "17:00",
+                "price": 150001
+            },
+            {
+                "id": "6",
+                "startedAt": "19:00",
+                "endedAt": "21:00",
+                "price": 150001
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Sân Cầu Duy Hưng",
+        "description": "Sân Cầu Duy Hưng sở hữu hệ thống mặt sân thảm tiêu chuẩn thi đấu, ánh sáng đạt chuẩn và không gian thoáng mát, phù hợp cho cả tập luyện lẫn thi đấu giao hữu.\n\nVới đội ngũ nhân viên thân thiện cùng dịch vụ nước uống, gửi xe tiện lợi, nơi đây là lựa chọn quen thuộc của nhiều câu lạc bộ cầu lông trong khu vực.\n\nDù bạn chơi một mình hay đi cùng nhóm bạn, Duy Hưng luôn sẵn sàng đón tiếp bạn với những trận cầu bốc lửa.",
+        "address": "Ngõ 214 Đường Nguyễn Xiển, Triều Khúc, Thanh Liệt, Hà Nội, Việt Nam",
+        "activeDays": [2, 3, 4, 5, 6, 7, 8],
+        "hotline": "0912345678",
+        "email": "contact@sancauduyhung.vn",
+        "images": ["/assets/images/courts/san-cau-duy-hung/1.webp", "/assets/images/courts/san-cau-duy-hung/2.webp"],
+        "cover": "/assets/images/courts/san-cau-duy-hung/cover.webp",
+        "pricing": [
+            { "id": "1", "startedAt": "05:00", "endedAt": "07:00", "price": 120000 },
+            { "id": "2", "startedAt": "07:00", "endedAt": "09:00", "price": 130000 },
+            { "id": "3", "startedAt": "09:00", "endedAt": "11:00", "price": 130000 },
+            { "id": "4", "startedAt": "13:00", "endedAt": "15:00", "price": 130000 },
+            { "id": "5", "startedAt": "15:00", "endedAt": "17:00", "price": 150000 },
+            { "id": "6", "startedAt": "17:00", "endedAt": "19:00", "price": 180000 },
+            { "id": "7", "startedAt": "19:00", "endedAt": "21:00", "price": 200000 }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Sân Cầu Lông Minh Phát",
+        "description": "Sân Cầu Lông Minh Phát là địa điểm lý tưởng cho những ai muốn rèn luyện sức khỏe mỗi ngày với mức giá hợp lý.\n\nSân có nhiều khung giờ linh hoạt, mặt sân êm, hạn chế chấn thương và luôn được vệ sinh sạch sẽ.\n\nĐây cũng là nơi tổ chức các buổi giao lưu cuối tuần, giúp người chơi kết nối và nâng cao trình độ.",
+        "address": "56 Nguyễn Văn Cừ, An Hòa, Ninh Kiều, Cần Thơ, Việt Nam",
+        "activeDays": [2, 3, 4, 5, 6, 7],
+        "hotline": "0987654321",
+        "email": "lienhe@caulongminhphat.vn",
+        "images": ["/assets/images/courts/cau-long-minh-phat/1.webp"],
+        "cover": "/assets/images/courts/cau-long-minh-phat/cover.webp",
+        "pricing": [
+            { "id": "1", "startedAt": "05:00", "endedAt": "07:00", "price": 100000 },
+            { "id": "2", "startedAt": "07:00", "endedAt": "09:00", "price": 110000 },
+            { "id": "3", "startedAt": "09:00", "endedAt": "11:00", "price": 110000 },
+            { "id": "4", "startedAt": "14:00", "endedAt": "16:00", "price": 110000 },
+            { "id": "5", "startedAt": "16:00", "endedAt": "18:00", "price": 140000 },
+            { "id": "6", "startedAt": "18:00", "endedAt": "20:00", "price": 170000 }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Sân Cầu Lông Phương Nam",
+        "description": "Sân Cầu Lông Phương Nam mang đến không gian thi đấu chuyên nghiệp với hệ thống đèn LED chống chói và sàn thảm PVC cao cấp.\n\nSân phù hợp cho cả người chơi phong trào lẫn các vận động viên muốn luyện tập nâng cao.\n\nKhu vực nghỉ ngơi rộng rãi, có căn tin phục vụ đồ uống để bạn thoải mái giữa các hiệp đấu.",
+        "address": "245 Trần Hưng Đạo, Cái Khế, Ninh Kiều, Cần Thơ, Việt Nam",
+        "activeDays": [2, 3, 4, 5, 6, 7, 8],
+        "hotline": "0933221144",
+        "email": "info@caulongphuongnam.vn",
+        "images": ["/assets/images/courts/cau-long-phuong-nam/1.webp"],
+        "cover": "/assets/images/courts/cau-long-phuong-nam/cover.webp",
+        "pricing": [
+            { "id": "1", "startedAt": "05:00", "endedAt": "07:00", "price": 140000 },
+            { "id": "2", "startedAt": "07:00", "endedAt": "09:00", "price": 160000 },
+            { "id": "3", "startedAt": "09:00", "endedAt": "11:00", "price": 160000 },
+            { "id": "4", "startedAt": "13:00", "endedAt": "15:00", "price": 160000 },
+            { "id": "5", "startedAt": "15:00", "endedAt": "17:00", "price": 180000 },
+            { "id": "6", "startedAt": "17:00", "endedAt": "19:00", "price": 220000 },
+            { "id": "7", "startedAt": "19:00", "endedAt": "21:00", "price": 250000 }
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Sân Cầu Lông Bình Minh",
+        "description": "Sân Cầu Lông Bình Minh là nơi bắt đầu ngày mới đầy năng lượng cho những người yêu thích vận động buổi sáng sớm.\n\nSân có không gian thoáng đãng, nhiều cây xanh xung quanh, giúp bạn vừa tập luyện vừa thư giãn tinh thần.\n\nGiá thuê ưu đãi cho học sinh, sinh viên và các nhóm đặt sân dài hạn.",
+        "address": "88 Mậu Thân, An Hòa, Ninh Kiều, Cần Thơ, Việt Nam",
+        "activeDays": [2, 3, 4, 5, 6],
+        "hotline": "0978123456",
+        "email": "hotro@caulongbinhminh.vn",
+        "images": ["/assets/images/courts/cau-long-binh-minh/1.webp"],
+        "cover": "/assets/images/courts/cau-long-binh-minh/cover.webp",
+        "pricing": [
+            { "id": "1", "startedAt": "05:00", "endedAt": "07:00", "price": 90000 },
+            { "id": "2", "startedAt": "07:00", "endedAt": "09:00", "price": 100000 },
+            { "id": "3", "startedAt": "09:00", "endedAt": "11:00", "price": 100000 },
+            { "id": "4", "startedAt": "15:00", "endedAt": "17:00", "price": 120000 },
+            { "id": "5", "startedAt": "17:00", "endedAt": "19:00", "price": 150000 }
+        ]
+    }
+]

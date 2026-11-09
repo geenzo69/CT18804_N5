@@ -1,78 +1,127 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Chi tiết Sân Cẩu Đản</title>
+    <link rel="stylesheet" href="/assets/global.css">
+    <script type="module" src="scripts/loader.js" blocking="render"></script>
+    <script type="module" src="/assets/scripts/header.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <title>Chi tiết sân</title>
 </head>
+
 <body>
     <header>
-        <h2>Sân Cầu 247</h2>
+        <a href="/"><img draggable="false" class="logo" src="/assets/images/logo.png" alt="Logo"></a>
         <button id="menu">
-            <i data-lucide="menu"></i>
-            <i data-lucide="x" style="display: none;"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-x" style="display: none;"></i>
         </button>
         <nav>
             <ul>
-                <li class="active"><i data-lucide="house"></i>Trang chủ</li>
-                <li><i data-lucide="history"></i>Lịch sử đặt</li>
-                <li><i data-lucide="info"></i>Về chúng tôi</li>
+                <li>
+                    <a href="/">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="/lich-su-dat">Lịch sử đặt</a>
+                </li>
+                <li>
+                    <a href="/ve-chung-toi">Về chúng tôi</a>
+                </li>
             </ul>
         </nav>
+
+        <a class="login-btn" href="/">Đăng nhập</a>
+        <div class="user-menu">
+            <h5>Hoàng Văn A</h5>
+            <img height="32px" src="https://avatars.githubusercontent.com/u/107747605?v=4">
+        </div>
     </header>
 
     <nav class="mobile">
         <ul>
-            <li class="active"><i data-lucide="house"></i>Trang chủ</li>
-            <li>Lịch sử đặt</li>
-            <li>Về chúng tôi</li>
+            <li>
+                <a href="/">Trang chủ</a>
+            </li>
+            <li>
+                <a href="/lich-su-dat">Lịch sử đặt</a>
+            </li>
+            <li>
+                <a href="/ve-chung-toi">Về chúng tôi</a>
+            </li>
+
+            <div class="user-menu">
+                <h5>Hoàng Văn A</h5>
+                <img height="32px" src="https://avatars.githubusercontent.com/u/107747605?v=4">
+            </div>
+
+            <a class="login-btn" href="/">Đăng nhập</a>
         </ul>
     </nav>
 
     <main>
         <div class="header">
-            <img src="/images/san-cau-dan.png" alt="Ảnh bìa Sân Cẩu Đản" draggable="false">
+            <img id="cover" src="images/none.webp" alt="Ảnh bìa Sân Cẩu Đản" draggable="false">
 
             <div class="basic">
-                <h2>Sân Cẩu Đản</h2>
+                <h2 id="title">Sân Cẩu Đản</h2>
                 <div>
-                    <p><i data-lucide="map-pin"></i> Số 100, đường giữa, TP Cần Thơ</p>
-                    <p><i data-lucide="clock"></i> 05:00 - 22:00</p>
+                    <p><i class="fa-solid fa-location-dot"></i> <span id="address">Số 100, đường giữa, TP Cần Thơ</span></pả>
+                    <p><i class="fa-solid fa-clock"></i> <span id="time">05:00 - 22:00</span></p>
                 </div>
-                <a href="/dat-lich?id=0">Đặt lịch ngay</a>
+                <a id="datlich-btn" href="/dat-lich">Đặt lịch ngay</a>
             </div>
         </div>
 
-        <div class="container">
-            <span>Mô tả chi tiết</span>
+        <div class="double">
+            <div class="container">
+                <span>Giới thiệu</span>
+    
+                <p id="description">
+                    Sân cầu lông Cẩu Đản là địa điểm lý tưởng dành cho những người yêu thích bộ môn cầu lông, nơi mang đến
+                        không gian tập luyện, giao lưu và thi đấu trong một môi trường năng động, thân thiện và đầy nhiệt huyết.
+                        Với mong muốn xây dựng một sân chơi thể thao lành mạnh, Cẩu Đản không chỉ là nơi để mọi người rèn luyện
+                        sức khỏe mà còn là điểm hẹn quen thuộc của những người có chung niềm đam mê với bộ môn cầu lông.
+                    Tại sân cầu lông Cẩu Đản, mỗi trận đấu không đơn thuần chỉ là sự cạnh tranh về kỹ thuật hay thể lực mà
+                        còn là cơ hội để người chơi trải nghiệm niềm vui, thử thách bản thân và nâng cao trình độ qua từng ngày.
+                        Dù bạn là người mới bắt đầu làm quen với cầu lông, người chơi phong trào hay đã có nhiều kinh nghiệm thi
+                        đấu, Cẩu Đản luôn hướng đến việc tạo ra một môi trường phù hợp để mọi người có thể tự tin tham gia, học
+                        hỏi và phát triển kỹ năng của mình.
+                    Không gian tại sân được định hướng xây dựng theo tiêu chí thoải mái, thuận tiện và đáp ứng nhu cầu tập
+                        luyện của người chơi. Từ những buổi đánh cầu thư giãn sau giờ học, giờ làm cho đến những trận giao hữu
+                        sôi nổi giữa các nhóm bạn, sân cầu lông Cẩu Đản mong muốn mang lại trải nghiệm thể thao tích cực và đáng
+                        nhớ. Mỗi lần đến sân là một cơ hội để giải tỏa căng thẳng, cải thiện sức bền, tăng cường khả năng phản
+                        xạ, rèn luyện sự linh hoạt và duy trì lối sống lành mạnh.
+                </p>
+            </div>
+            <div class="container">
+                <span>Liên hệ</span>
 
-            <p>Sân cầu lông Cẩu Đản là địa điểm lý tưởng dành cho những người yêu thích bộ môn cầu lông, nơi mang đến không gian tập luyện, giao lưu và thi đấu trong một môi trường năng động, thân thiện và đầy nhiệt huyết. Với mong muốn xây dựng một sân chơi thể thao lành mạnh, Cẩu Đản không chỉ là nơi để mọi người rèn luyện sức khỏe mà còn là điểm hẹn quen thuộc của những người có chung niềm đam mê với bộ môn cầu lông.</p>
-            <p>Tại sân cầu lông Cẩu Đản, mỗi trận đấu không đơn thuần chỉ là sự cạnh tranh về kỹ thuật hay thể lực mà còn là cơ hội để người chơi trải nghiệm niềm vui, thử thách bản thân và nâng cao trình độ qua từng ngày. Dù bạn là người mới bắt đầu làm quen với cầu lông, người chơi phong trào hay đã có nhiều kinh nghiệm thi đấu, Cẩu Đản luôn hướng đến việc tạo ra một môi trường phù hợp để mọi người có thể tự tin tham gia, học hỏi và phát triển kỹ năng của mình.</p>
-            <p>Không gian tại sân được định hướng xây dựng theo tiêu chí thoải mái, thuận tiện và đáp ứng nhu cầu tập luyện của người chơi. Từ những buổi đánh cầu thư giãn sau giờ học, giờ làm cho đến những trận giao hữu sôi nổi giữa các nhóm bạn, sân cầu lông Cẩu Đản mong muốn mang lại trải nghiệm thể thao tích cực và đáng nhớ. Mỗi lần đến sân là một cơ hội để giải tỏa căng thẳng, cải thiện sức bền, tăng cường khả năng phản xạ, rèn luyện sự linh hoạt và duy trì lối sống lành mạnh.</p>
-        
-            <p>Hotline: 18006996</p>
-            <p>Email: contact@sancaudan.vn</p>
+                <p><i class="fa-solid fa-phone"></i> Hotline: <b id="hotline">18006996</b></p>
+                <p><i class="fa-solid fa-envelope"></i> Email: <b id="email">contact@sancaudan.vn</b></p>
+            </div>
         </div>
+
 
         <div class="container">
             <span>Hình ảnh</span>
 
-            <div>
-                <img src="https://cdn.shopvnb.com/uploads/images/bai_viet/san-cau-long-aka-badminton-center-2-1738979218.webp" alt="">
-                <img src="https://cdn.shopvnb.com/uploads/images/bai_viet/san-cau-long-aka-badminton-center-2-1738979218.webp" alt="">
-                <img src="https://cdn.shopvnb.com/uploads/images/bai_viet/san-cau-long-aka-badminton-center-2-1738979218.webp" alt="">
-                <img src="https://cdn.shopvnb.com/uploads/images/bai_viet/san-cau-long-aka-badminton-center-2-1738979218.webp" alt="">
-                <img src="https://cdn.shopvnb.com/uploads/images/bai_viet/san-cau-long-aka-badminton-center-2-1738979218.webp" alt="">
-                <img src="https://cdn.shopvnb.com/uploads/images/bai_viet/san-cau-long-aka-badminton-center-2-1738979218.webp" alt="">
+            <img src="images/none.webp" class="featured-img">
 
+            <div class="img-list">
+                <img src="images/none.webp" alt="">
+                <img src="images/none.webp" alt="">
+                <img src="images/none.webp" alt="">
             </div>
         </div>
 
         <div class="container">
             <span>Lịch tuần này và tuần sau</span>
             <div style="overflow: scroll;">
-                <table>
+                <table id="schedules">
                     <tr>
                         <th></th>
                         <th>T2</th>
@@ -200,33 +249,6 @@
     <footer>
         © 2026 - Nhóm 5
     </footer>
-
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-
-    <script>
-        lucide.createIcons();
-
-        const menu = document.getElementById("menu");
-        const nav = document.querySelector("nav.mobile");
-
-        if (menu) {
-            menu.addEventListener("click", (e) => {
-                if (!nav) {
-                    return;
-                }
-
-                if (nav.style.display == "block") {
-                    nav.style.display = "none";
-                    menu.querySelector("svg.lucide-menu").style.display = "inline";
-                    menu.querySelector("svg.lucide-x").style.display = "none";
-                } else {
-                    nav.style.display = "block";
-                    menu.querySelector("svg.lucide-menu").style.display = "none";
-                    menu.querySelector("svg.lucide-x").style.display = "inline";
-                
-                }
-            });
-        }
-    </script>
 </body>
+
 </html>
