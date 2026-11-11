@@ -32,6 +32,7 @@ function update() {
 
     imgList.replaceChildren(...d.images.map((v) => {
         const el = document.createElement("img");
+        el.loading = "lazy";
         el.src = v;
         
         return el;
