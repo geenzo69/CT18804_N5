@@ -1,5 +1,3 @@
-import courts from "../../assets/data/courts.json" with { type: "json" };
-
 function update() {
     const searchQueries = new URLSearchParams(location.search);
     
