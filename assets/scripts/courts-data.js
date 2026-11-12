@@ -10,12 +10,12 @@ window.courts = [
         images: ["/assets/images/courts/cau-long-hoang-long/1.webp"],
         cover: "/assets/images/courts/cau-long-hoang-long/cover.webp",
         pricing: [
-            { id: "1", startedAt: "05:00", endedAt: "07:00", price: 150000 },
-            { id: "2", startedAt: "07:00", endedAt: "09:00", price: 150001 },
-            { id: "3", startedAt: "09:00", endedAt: "11:00", price: 150001 },
-            { id: "4", startedAt: "13:00", endedAt: "15:00", price: 150001 },
-            { id: "5", startedAt: "15:00", endedAt: "17:00", price: 150001 },
-            { id: "6", startedAt: "19:00", endedAt: "21:00", price: 150001 }
+            { id: "1", startedAt: "05:00", endedAt: "07:00", price: 130000 },
+            { id: "2", startedAt: "07:00", endedAt: "09:00", price: 140000 },
+            { id: "3", startedAt: "09:00", endedAt: "11:00", price: 140000 },
+            { id: "4", startedAt: "13:00", endedAt: "15:00", price: 140000 },
+            { id: "5", startedAt: "15:00", endedAt: "17:00", price: 150000 },
+            { id: "6", startedAt: "19:00", endedAt: "21:00", price: 180000 }
         ]
     },
     {
