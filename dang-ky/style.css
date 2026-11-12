@@ -1,0 +1,226 @@
+* {
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+body {
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@keyframes shuttle-drop {
+    0%   { opacity: 0; transform: translate(-50%, -20px) rotate(-28deg); }
+    50%  { opacity: 1; transform: translate(-50%, 4px) rotate(14deg); }
+    75%  { opacity: 1; transform: translate(-50%, -3px) rotate(-7deg); }
+    100% { opacity: 1; transform: translate(-50%, 0) rotate(0); }
+}
+.nen_trang {
+    position: relative;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.anh_nen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;        
+}
+.the_dang_ky {
+    position: relative;
+    z-index: 2;        /* Đưa khung đăng ký nổi lên trên ảnh nền */
+    width: 100%;
+    max-width: 440px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 45px 30px 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.anh_traicau_dinh {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 64px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.anh_traicau_dinh img {
+    width: 135px;
+    height: 65px;
+    border-radius: 50px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+.dau_the {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dau_the h1 {
+    font-size: 24px;
+    color: #08673f;
+    margin-bottom: 6px;
+}
+
+.dau_the p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2e2f31;
+}
+.gach_chan_ngan {
+    display: inline-block;
+    width: 60px;
+    height: 3px;
+    border-radius: 16px;
+    background-color: #118c58;
+    margin-top: 10px;
+}
+/* thong bao khi co loi or tcong*/
+.hop_thong_bao {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 13.5px;
+    text-align: center;
+    margin-bottom: 14px;
+}
+.hop_thong_bao.an {
+    display: none;
+}
+
+.hop_thong_bao.loi {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.hop_thong_bao.thanh_cong {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+.o_nhap_lieu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.o_nhap_lieu .icon_trai {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+}
+
+.o_nhap_lieu input {
+    width: 100%;
+    padding: 13px 44px;
+    border: 1px solid #cbd5e1;
+    border-radius: 50px;
+    font-size: 14px;
+}
+.nut_an_hien_mk {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+}
+.dong_dieu_khoan {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    margin: 8px 0 18px 4px;
+    cursor: pointer;
+}
+
+.dong_dieu_khoan input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.dong_dieu_khoan {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    margin: 6px 0 18px 4px;
+    cursor: pointer;
+}
+
+.dong_dieu_khoan a {
+    color: #26513f;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nut_dang_ky {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 50px;
+    background-color: #118c58;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.nut_dang_ky:hover {
+    background-color: #0b6e44;
+}
+/* Phần mạng xã hội */
+.phan_cach {
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+    margin: 18px 0 14px;
+}
+
+.nhom_mxh {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+.nut_mxh {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nut_mxh.google {
+     color: #cc2111e6; 
+}
+.nut_mxh.facebook { 
+    color: #1877f2; 
+}
+.nut_mxh.apple { 
+    color: #111827;
+ }

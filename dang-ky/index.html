@@ -11,6 +11,9 @@
     <script type="module" src="/assets/scripts/header.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+     <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
     <title>Đăng ký tài khoản</title>
 </head>
 
@@ -63,9 +66,83 @@
         </ul>
     </nav>
 
-    <main>
+    <main class="nen_trang">
+        <img src="./img/background.jpg" alt="Ảnh nền sân cầu lông" class="anh_nen">
+        <div class="the_dang_ky">
+            <div class="anh_traicau_dinh">
+                <img src="./img/traicauve.jpg" alt="Trái cầu lông">
+            </div>
 
+            <div class="dau_the">
+                <h1>Đăng ký tài khoản</h1>
+                <p>Tham gia BadmintonPlus để trải nghiệm dịch vụ đặt sân cầu lông tiện lợi nhất!</p>
+                <span class="gach_chan_ngan"></span>
+            </div>
+
+            <!-- Vùng hiển thị thông báo lỗi or thành công -->
+            <div id="hop_thong_bao" class="hop_thong_bao an"></div>
+            <form id="form_dang_ky" novalidate>
+                <!-- Họ và tên -->
+                <div class="o_nhap_lieu">
+                    <i class="fa-regular fa-user icon_trai"></i>
+                    <input type="text" id="ho_ten" placeholder="Họ và tên" required>
+                </div>
+
+                <!-- Email -->
+                <div class="o_nhap_lieu">
+                    <i class="fa-regular fa-envelope icon_trai"></i>
+                    <input type="email" id="email" placeholder="Email của bạn" required>
+                </div>
+                <!-- Mk -->
+                <div class="o_nhap_lieu">
+                    <i class="fa-solid fa-lock icon_trai"></i>
+                    <input type="password" id="mat_khau" placeholder="Mật khẩu" required>
+                    <button type="button" class="nut_an_hien_mk" data-target="mat_khau" title="Hiện/Ẩn mật khẩu">
+                        <i class="fa-regular fa-eye-slash"></i>
+                    </button>
+                </div>
+                    <!-- Nhập lại mk -->
+                <div class="o_nhap_lieu">
+                    <i class="fa-solid fa-lock icon_trai"></i>
+                    <input type="password" id="nhap_lai_mat_khau" placeholder="Nhập lại mật khẩu" required>
+                    <button type="button" class="nut_an_hien_mk" data-target="nhap_lai_mat_khau" title="Hiện/Ẩn mật khẩu">
+                        <i class="fa-regular fa-eye-slash"></i>
+                    </button>
+                </div>
+                <!-- Điều khoản -->
+                <label class="dong_dieu_khoan">
+                    <input type="checkbox" id="dong_y_dieu_khoan">
+                    <span>
+                        Tôi đồng ý với <a href="#"><strong>Điều khoản sử dụng</strong></a> và <a href="#"><strong>Chính sách bảo mật</strong></a>
+                    </span>
+                </label>
+
+                <!-- Nút đăng ký -->
+                <button type="submit" class="nut_dang_ky">
+                    <span>Đăng ký</span>
+                    <a href="../ve-chung-toi/index.html" class="nut_xemsan"></a>
+                    <i class="fa-solid fa-arrow-right muiten"></i>
+                </button>
+            </form>
+            
+            <div class="phan_cach">
+                <span>Hoặc đăng ký bằng</span>
+            </div>
+            <div class="nhom_mxh">
+                <a href="#" class="nut_mxh google" title="Đăng ký bằng Google">
+                    <i class="fa-brands fa-google"></i>
+                </a>
+                <a href="#" class="nut_mxh facebook" title="Đăng ký bằng Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="nut_mxh apple" title="Đăng ký bằng Apple">
+                    <i class="fa-brands fa-apple"></i>
+                </a>
+            </div>
+
+        </div>
     </main>
+    <script src="./script.js"></script>
 
     <footer>
         © 2026 - Nhóm 5
