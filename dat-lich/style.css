@@ -31,21 +31,9 @@
   box-sizing: border-box;
 }
 
-/* 3 ô ngày/tháng/năm nằm cùng một hàng */
 .date-row {
   display: flex;
   gap: 8px;
-}
-
-.box .info {
-  font-size: 14px;
-  color: #555;
-}
-
-.box .total {
-  margin-top: 16px;
-  font-weight: bold;
-  color: var(--xanh-dam);
 }
 
 #btnBook {
@@ -62,16 +50,4 @@
 #btnBook:hover {
   background: var(--xanh-sang);
   color: var(--xanh-chu);
-}
-
-#message {
-  font-weight: bold;
-}
-
-#message.error {
-  color: red;
-}
-
-#message.success {
-  color: var(--xanh-dam);
 }
