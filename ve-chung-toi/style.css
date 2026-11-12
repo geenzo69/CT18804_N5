@@ -377,7 +377,8 @@ a {
     justify-content: center;
     gap: 16px;
     padding: 0 20px;
- }
+}
+
  .icon_stats{
     width: 100px;
     height: 100px;
@@ -403,10 +404,10 @@ a {
     line-height: 1.1;
 }
 .stats_content h2 {
-    font-size: 13px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
     color: rgba(255, 255, 255, 0.85);
-    margin: 0;
+    margin: 12px 0;
     white-space: nowrap;
 }
 /* .img_icon_stats_photo3,
@@ -416,5 +417,267 @@ a {
     height: 30px;
     object-fit: contain;
 } */
+/* ==========================================
+   TEAM: TẦNG 1 (NGƯỜI 1, 2) - TẦNG 2 (NGƯỜI 3, 4, 5)
+   ========================================== */
+
+.team {
+    max-width: 97%;
+    margin: 50px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+}
+
+.team h2 {
+    grid-column: 1 / -1;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #0b3b59;
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nguoi1, .nguoi2, .nguoi3, .nguoi4, .nguoi5 {
+    background-color: #f6f9fc;
+    border: 1px solid #edf2f7;
+    border-radius: 14px;
+    padding: 24px;
+    min-height: 165px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nguoi1:hover, .nguoi2:hover, .nguoi3:hover, .nguoi4:hover, .nguoi5:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Tầng 1 */
+.nguoi1 {
+     grid-column: 2 / span 2;
+}
+.nguoi2 { 
+    grid-column: 4 / span 2; 
+}
+
+/* Tầng 2*/
+.nguoi3 { 
+    grid-column: 1 / span 2;
+ }
+.nguoi4 {
+     grid-column: 3 / span 2;
+     }
+.nguoi5 { 
+    grid-column: 5 / span 2; 
+}
+
+
+.images_team_photo1,
+.images_team_photo2,
+.images_team_photo3,
+.images_team_photo4,
+.images_team_photo5 {
+    width: 105px;
+    height: 105px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: #e2e8f0;
+}
+
+.images_team_photo1 img,
+.images_team_photo2 img,
+.images_team_photo3 img,
+.images_team_photo4 img,
+.images_team_photo5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.team_info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0b3b59;
+    margin: 0 0 4px 0;
+}
+
+.team_info .role {
+    font-size: 16px;
+    font-weight: 600;
+    color: #20b775;
+    margin: 0 0 6px 0;
+}
+
+.team_info .quote {
+    font-size: 16px;
+    color: #64748b;
+    margin: 0;
+}
+
+
+.datsan_ngay {
+    width: 100%;
+    background-color: #f1f8f7;
+    padding: 36px 20px;
+    margin: 40px 0;
+    box-sizing: border-box;
+}
+
+.datsan_khung {
+    max-width: 1260px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+
+.datsan_trai {
+    flex: 1.15;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.san_phai {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+
+.datsan_anh {
+    flex-shrink: 0;
+}
+
+
+.datsan_anh img {
+    width: 120px;
+    height: 136px;
+    border-radius: 220px;
+    object-fit: contain;
+    display: block;
+}
+
+.vach_giua {
+    width: 1px;
+    height: 115px;
+    background-color: #c5ded9;
+    flex-shrink: 0;
+}
+
+
+.icon_xemsan {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #d8efe9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon_xemsan i {
+    font-size: 40px;
+    color: #156a41;
+}
+
+
+.datsan_noidung_trai h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #156a41;
+    margin: 0 0 6px 0;
+    letter-spacing: 0.2px;
+}
+
+.datsan_noidung_phai h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #156a41;
+    margin: 0 0 6px 0;
+}
+
+.datsan_noidung_trai p,
+.datsan_noidung_phai p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #334155;
+    line-height: 1.5;
+    margin: 0 0 16px 0;
+}
+
+/* nút màu cam */
+.nut_datsan {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f26522;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(242, 101, 34, 0.24);
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.nut_datsan:hover {
+    background-color: #dc5312;
+    transform: translateY(-2px);
+}
+
+/* nút viền xanh: Xem sân */
+.nut_xemsan {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    border: 1.5px solid #20b775;
+    color: #156a41;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 11px 28px;
+    border-radius: 50px;
+    transition: all 0.25s ease;
+}
+
+.nut_xemsan:hover {
+    background-color: #20b775;
+    color: #ffffff;
+}
+
+
+.muiten {
+    font-size: 14px;
+    transition: transform 0.25s ease;
+}
+
+.nut_datsan:hover .muiten,
+.nut_xemsan:hover .muiten {
+    transform: translateX(4px);
+}
+
+
+
+
 
 
