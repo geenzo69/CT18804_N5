@@ -84,6 +84,37 @@
                 giúp bạn dễ dàng làm chủ mọi khung giờ tập luyện, từ đó từng bước kết nối những tâm hồn yêu thể thao
                 và cùng nhau xây dựng một cộng đồng người chơi văn minh, gắn kết và đầy năng lượng. </p>
         </div>
+       <!-- <div class="banner_slide an">
+            <div class="images_banner">
+                <img class="images_banner_photo" src="./images/banner2.jpg" alt="banner 2">
+            </div>
+            <div class="banner_content">
+                <p class="label"> Cơ Sở Vật Chất </p>
+                <h1> Mặt thảm chuẩn thi đấu quốc tế <br>
+                    <span class="main-heading">Hệ thống đèn LED chống chói hiện đại</span>
+                </h1>
+                <p>Hệ thống sân được đầu tư mặt thảm PVC cao cấp có độ đàn hồi và bám sân tối ưu, bảo vệ tối đa khớp cổ chân cho người chơi. Không gian thoáng đãng cùng trần cao tiêu chuẩn giúp bạn thoải mái tung ra những pha cầu uy lực nhất.</p>
+            </div>
+        </div>
+        <button type="button" class="nut_banner nut_trai" id="nut_trai">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button type="button" class="nut_banner nut_phai" id="nut_phai">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </section>
+    <script>
+        const cac_slide = document.querySelectorAll(".banner_slide");
+        let vi_tri = 0;
+
+        setInterval(function () {
+            cac_slide[vi_tri].classList.add("an");
+            vi_tri = (vi_tri + 1) % cac_slide.length;
+            cac_slide[vi_tri].classList.remove("an");
+        }, 3000);
+    </script> -->
+
+    
     </section>
     <section class="story">
         <img class="images_story_photo1 " src="./images/nguoichoi.jpg" alt="Badminton player">
@@ -217,7 +248,7 @@
             <div class="team_info">
                 <h3>Hoàng Tuấn Kiệt</h3>
                 <p class="role">Leader</p>
-                <p class="quote">"Sân cầu là nhà."</p>
+                <p class="quote">"Sân."</p>
             </div>
         </div>
          <div class="nguoi2">
@@ -227,7 +258,7 @@
             <div class="team_info">
                 <h3>Bùi Ngọc Ý</h3>
                 <p class="role">Deputy Leader</p>
-                <p class="quote">"Sân cầu là nhà."</p>
+                <p class="quote">"About us & Đăng Đăng kí."</p>
             </div>
         </div>
         <div class="nguoi3">
@@ -237,7 +268,7 @@
             <div class="team_info">
                 <h3>Chung Gia Thịnh </h3>
                 <p class="role">Member</p>
-                <p class="quote">"Sân cầu là nhà."</p>
+                <p class="quote">"Đặt lịch."</p>
             </div>
         </div>  
          
@@ -248,17 +279,17 @@
             <div class="team_info">
                 <h3>Trần Cẩm Sơn </h3>
                 <p class="role">Member</p>
-                <p class="quote">"Sân cầu là nhà."</p>
+                <p class="quote">"Lịch sử cài đặt."</p>
             </div>
         </div>
         <div class="nguoi5">
             <div class="images_team_photo5">
-                <img src="./images/player.jpg" alt="Nguyễn Văn B">
+                <img src="./images/tv5.jpg" alt="Bùi Lê Quang Vinh ">
             </div>
             <div class="team_info">
-                <h3>Nguyễn Văn B</h3>
+                <h3>Bùi Lê Quang Vinh </h3>
                 <p class="role">Member</p>
-                <p class="quote">"Sân cầu là nhà."</p>
+                <p class="quote">"Trang chủ."</p>
             </div>
         </div>
 
@@ -303,12 +334,94 @@
 </section>
 
 
-    <!-- <footer class="footer">
-        <div class="footer_logo">
-            <img class="images_footer" src="./images/logo.jpg" alt="footer_logo">
-        </div>
+<!-- cau hoi thuong gap -->
+<section class="faq">
+    <h2>
+        <i class="fa-regular fa-circle-question"></i>
+        Câu hỏi thường gặp
+    </h2>
 
-    </footer> --> 
+    <div class="faq_item">
+        <button type="button" class="faq_question">
+            BadmintonPlus là gì?
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <p class="faq_answer">
+            BadmintonPlus là nền tảng hỗ trợ người chơi cầu lông
+            tìm kiếm và đặt sân thuận tiện, góp phần xây dựng
+            cộng đồng thể thao năng động và lành mạnh.
+        </p>
+    </div>
+
+    <div class="faq_item">
+        <button type="button" class="faq_question">
+            Làm thế nào để đặt sân cầu lông?
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <p class="faq_answer">
+            Bạn truy cập trang đặt sân, lựa chọn sân,
+            ngày và khung giờ phù hợp, sau đó thực hiện
+            các bước xác nhận đặt sân.
+        </p>
+    </div>
+
+    <div class="faq_item">
+        <button type="button" class="faq_question">
+            Tôi có thể xem lịch sử đặt sân ở đâu?
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <p class="faq_answer">
+            Bạn có thể truy cập mục Lịch sử đặt trên
+            thanh menu để xem thông tin đặt sân của mình.
+        </p>
+    </div>
+
+    <div class="faq_item">
+        <button type="button" class="faq_question">
+            Làm thế nào để đăng ký tài khoản?
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <p class="faq_answer">
+            Bạn truy cập trang Đăng ký, nhập họ tên,
+            email, mật khẩu và xác nhận mật khẩu.
+            Sau đó đồng ý với điều khoản và nhấn Đăng ký.
+        </p>
+    </div>
+
+    <div class="faq_item">
+        <button type="button" class="faq_question">
+            BadmintonPlus hướng đến điều gì?
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <p class="faq_answer">
+            BadmintonPlus hướng đến việc xây dựng một cộng đồng
+            cầu lông năng động, gắn kết, mang đến không gian
+            thể thao chất lượng và trải nghiệm tích cực.
+        </p>
+    </div>
+</section>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cacCauHoi = document.querySelectorAll(".faq_question");
+
+    cacCauHoi.forEach(function (cauHoi) {
+        cauHoi.addEventListener("click", function () {
+            const cauTraLoi = cauHoi.nextElementSibling;
+            const icon = cauHoi.querySelector("i");
+
+            if (cauTraLoi.classList.contains("hien")) {
+                cauTraLoi.classList.remove("hien");
+                icon.className = "fa-solid fa-chevron-down";
+            } else {
+                cauTraLoi.classList.add("hien");
+                icon.className = "fa-solid fa-chevron-up";
+            }
+        });
+    });
+});
+</script>  
 
 
 

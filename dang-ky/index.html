@@ -81,7 +81,9 @@
 
             <!-- Vùng hiển thị thông báo lỗi or thành công -->
             <div id="hop_thong_bao" class="hop_thong_bao an"></div>
-            <form id="form_dang_ky" novalidate>
+            <form id="form_dang_ky"
+      data-redirect="/ve-chung-toi/"
+      novalidate>
                 <!-- Họ và tên -->
                 <div class="o_nhap_lieu">
                     <i class="fa-regular fa-user icon_trai"></i>
@@ -118,11 +120,10 @@
                 </label>
 
                 <!-- Nút đăng ký -->
-                <button type="submit" class="nut_dang_ky">
-                    <span>Đăng ký</span>
-                    <a href="../ve-chung-toi/index.html" class="nut_xemsan"></a>
-                    <i class="fa-solid fa-arrow-right muiten"></i>
-                </button>
+            <button type="submit" class="nut_dang_ky">
+    <span>Đăng ký</span>
+    <i class="fa-solid fa-arrow-right muiten"></i>
+</button>
             </form>
             
             <div class="phan_cach">
@@ -142,11 +143,12 @@
 
         </div>
     </main>
-    <script src="./script.js"></script>
+   
 
     <footer>
         © 2026 - Nhóm 5
     </footer>
+    <script src="./script.js"></script>
 </body>
 
 </html>
