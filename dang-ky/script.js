@@ -9,19 +9,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const dieuKhoan = document.getElementById("dong_y_dieu_khoan");
     const thongBao = document.getElementById("hop_thong_bao");
 
-    // Kiểm tra form có tồn tại không
+    // Kiểm tra form có tồn tại khôngs
     if (!form || !thongBao) {
         console.error("Không tìm thấy form đăng ký hoặc hộp thông báo!");
         return;
     }
-
-    // Hàm hiển thị thông báo
     function hienThiThongBao(noiDung, loai) {
         thongBao.textContent = noiDung;
         thongBao.className = "hop_thong_bao " + loai;
     }
 
-    // Hiện / ẩn mật khẩu
+    // hien or an mk
     const cacNutMatKhau = document.querySelectorAll(".nut_an_hien_mk");
 
     cacNutMatKhau.forEach(function (nut) {
@@ -40,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Xử lý đăng ký
+    
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
@@ -49,14 +47,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const mk = matKhau.value;
         const nhapLaiMk = nhapLaiMatKhau.value;
 
-        // Kiểm tra họ tên
+        // check hten
         if (ten === "") {
             hienThiThongBao("Vui lòng nhập họ và tên!", "loi");
             hoTen.focus();
             return;
         }
 
-        // Kiểm tra email
+        // check mail
         const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!regexEmail.test(mail)) {
@@ -65,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Kiểm tra mật khẩu
+        // ktra mk
         if (mk.length < 8) {
             hienThiThongBao(
                 "Mật khẩu phải có ít nhất 8 ký tự!",
@@ -75,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Kiểm tra nhập lại mật khẩu
+        // ktra nhap mk
         if (mk !== nhapLaiMk) {
             hienThiThongBao(
                 "Mật khẩu nhập lại không khớp!",
@@ -85,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Kiểm tra điều khoản
+        // check dieu khonan
         if (!dieuKhoan.checked) {
             hienThiThongBao(
                 "Vui lòng đồng ý với điều khoản sử dụng!",
@@ -94,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Kiểm tra email trùng và lưu thông tin
+        // check mail trung
         try {
             const emailDaTonTai = localStorage.getItem(
                 "taiKhoan_" + mail
@@ -109,19 +107,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            // Lưu thông tin đăng ký demo
+            // luu thong tin
             localStorage.setItem("taiKhoan_" + mail, ten);
 
-            // Hiển thị thông báo thành công
+            
             hienThiThongBao(
                 "Đăng ký thành công! Đang chuyển đến trang Về chúng tôi...",
                 "thanh_cong"
             );
 
-            // Xóa dữ liệu form
+            // delete form data
             form.reset();
 
-            // Chuyển sang About Us sau 1,5 giây
+            // chuyen page
             setTimeout(function () {
                 window.location.href = form.dataset.redirect;
             }, 1500);
