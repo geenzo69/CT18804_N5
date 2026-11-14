@@ -17,6 +17,8 @@ body {
     font-size: 25px;
     margin:5px;
     margin-bottom:8px;
+    position:sticky;
+    top:100px;
 }
 
 .main__left-article h2{
@@ -30,6 +32,7 @@ body {
     align-items: center;
     gap:20px;
     flex-wrap: wrap;
+    list-style: none;
 }
 
 .main__flex-middle{
@@ -40,34 +43,64 @@ body {
 }
 
 .main__navbar--images{
-    width: 300px;
+    width: 100%;
     height: 300px;
-    align-items: center;
-    align-self: center;
 }
 
-
-.main__navbar-desc{
-    text-align: center;
-}
 .main__navbar-info{
-    /* border: 5px dotted red; */
-    background-color:gray;
+    border-top:5px solid lightgray;
+    border-bottom: 5px solid lightgray;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color:black;
 }
+.main__navbar-desc{
+    text-align: left;
+    align-self: flex-start;
+    padding:5px;
+}
+
 .main__flex-right{
-    flex:1;
     border:5px solid grey;
+    flex:1;
     display:flex;
     flex-direction: column;
     gap:20px;
+    position:sticky;
+    top:65px;
+    align-self: flex-start;
+    height: fit-content;
 }
-.main__form{
-    flex:1;
+.main__right-tips{
+    text-align: left;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    border-top: 5px solid lightgray;
+}
+.main__tips{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:5px;
+    text-align: left;
+    font-size: 16px;
+}
+.main__tips p {
+    align-self: flex-start;
+}
+.main__tips--images{
+    width:300px;
+    height: 300px;
 }
 .main__right-article{
     text-align: left;
-    flex:4;
-    border-top: 5px solid darkslategray;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    border-top: 5px solid lightgray;
 }
 .main__right-article-funfact{
     display:flex;
@@ -80,12 +113,18 @@ body {
 .main__right-article-funfact p {
     text-align: left;
 }
-.main__right-article-image{
-
-}
-@media screen and (min-width: 481px) and (max-width:600px) {
+@media screen and (max-width:600px) {
     .main{
         flex-direction: row;
         flex-wrap: wrap;
+    }
+    .main__flex-left{
+        display:none;
+    }
+    .main__flex-right{
+        display:none;
+    }
+    .main {
+        display: block;
     }
 }
