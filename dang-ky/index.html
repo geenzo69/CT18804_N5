@@ -9,9 +9,11 @@
     <script src="/assets/scripts/courts-data.js"></script>
     <script type="module" src="scripts/loader.js" blocking="render"></script>
     <script type="module" src="/assets/scripts/header.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
-     <link
+    <link
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
         rel="stylesheet">
     <title>Đăng ký tài khoản</title>
@@ -81,33 +83,41 @@
 
             <!-- Vùng hiển thị thông báo lỗi or thành công -->
             <div id="hop_thong_bao" class="hop_thong_bao an"></div>
-            <form id="form_dang_ky"
-      data-redirect="/ve-chung-toi/"
-      novalidate>
-                <!-- Họ và tên -->
+            <form id="form_dang_ky" data-redirect="/ve-chung-toi/" novalidate>
                 <div class="o_nhap_lieu">
                     <i class="fa-regular fa-user icon_trai"></i>
-                    <input type="text" id="ho_ten" placeholder="Họ và tên" required>
+                    <input type="text" id="lastName" placeholder="Họ và tên đệm" required>
                 </div>
 
-                <!-- Email -->
+
                 <div class="o_nhap_lieu">
-                    <i class="fa-regular fa-envelope icon_trai"></i>
-                    <input type="email" id="email" placeholder="Email của bạn" required>
+                    <i class="fa-regular fa-user icon_trai"></i>
+                    <input type="text" id="firstName" placeholder="Tên" required>
                 </div>
-                <!-- Mk -->
+
+               
+                <div class="o_nhap_lieu">
+                    <i class="fa-solid fa-phone icon_trai"></i>
+                    <input type="tel" id="numberPhone" placeholder="Số điện thoại" maxlength="10" required>
+                </div>
+                <!-- SỬA: mat_khau thanh password -->
                 <div class="o_nhap_lieu">
                     <i class="fa-solid fa-lock icon_trai"></i>
-                    <input type="password" id="mat_khau" placeholder="Mật khẩu" required>
-                    <button type="button" class="nut_an_hien_mk" data-target="mat_khau" title="Hiện/Ẩn mật khẩu">
+                    <input type="password" id="password" placeholder="Mật khẩu" required>
+
+                    <!-- SỬA: data-target cho trung voi id moi -->
+                    <button type="button" class="nut_an_hien_mk" data-target="password" title="Hiện/Ẩn mật khẩu">
                         <i class="fa-regular fa-eye-slash"></i>
                     </button>
                 </div>
-                    <!-- Nhập lại mk -->
+
+                <!-- SỬA: nhap_lai_mat_khau thanh confirmPassword -->
                 <div class="o_nhap_lieu">
                     <i class="fa-solid fa-lock icon_trai"></i>
-                    <input type="password" id="nhap_lai_mat_khau" placeholder="Nhập lại mật khẩu" required>
-                    <button type="button" class="nut_an_hien_mk" data-target="nhap_lai_mat_khau" title="Hiện/Ẩn mật khẩu">
+                    <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu" required>
+
+                    <!-- SỬA: data-target cho trung voi id moi -->
+                    <button type="button" class="nut_an_hien_mk" data-target="confirmPassword" title="Hiện/Ẩn mật khẩu">
                         <i class="fa-regular fa-eye-slash"></i>
                     </button>
                 </div>
@@ -115,17 +125,18 @@
                 <label class="dong_dieu_khoan">
                     <input type="checkbox" id="dong_y_dieu_khoan">
                     <span>
-                        Tôi đồng ý với <a href="#"><strong>Điều khoản sử dụng</strong></a> và <a href="#"><strong>Chính sách bảo mật</strong></a>
+                        Tôi đồng ý với <a href="#"><strong>Điều khoản sử dụng</strong></a> và <a href="#"><strong>Chính
+                                sách bảo mật</strong></a>
                     </span>
                 </label>
 
                 <!-- Nút đăng ký -->
-            <button type="submit" class="nut_dang_ky">
-    <span>Đăng ký</span>
-    <i class="fa-solid fa-arrow-right muiten"></i>
-</button>
+                <button type="submit" class="nut_dang_ky">
+                    <span>Đăng ký</span>
+                    <i class="fa-solid fa-arrow-right muiten"></i>
+                </button>
             </form>
-            
+
             <div class="phan_cach">
                 <span>Hoặc đăng ký bằng</span>
             </div>
@@ -143,7 +154,7 @@
 
         </div>
     </main>
-   
+
 
     <footer>
         © 2026 - Nhóm 5
