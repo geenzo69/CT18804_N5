@@ -3,6 +3,8 @@
 }
 body {
   color: #222;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -16,11 +18,677 @@ a {
     75%  { opacity: 1; transform: translate(-50%, -3px) rotate(-7deg); }
     100% { opacity: 1; transform: translate(-50%, 0) rotate(0); }
 }
-
+/* MOBILE-FIRST */
 /* BANNER */
+
+
 .banner {
     position: relative;
     display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 30px 5%;
+    gap: 24px; 
+    width: 100%;
+    background: #def0e7;
+}
+.banner_content {
+    position: relative;
+    z-index: 2;
+    order: -1;
+    width: 100%;
+}
+.banner_content .label {
+    color: #1a8f55;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+.banner_content h1 {
+    font-size: 22px; 
+    line-height: 1.5;
+    font-weight: 700;
+    color: #011209;
+    margin-bottom: 16px;
+}
+
+.main-heading {
+    color: #1a8f55;
+}
+
+.banner_content p {
+    color: #202121;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.images_banner {
+    position: relative;
+    width: 100%;
+    height: 220px;
+}
+
+.images_banner_photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+
+
+.story {
+    margin: 0; /* SỬA: Bỏ margin 40px hai bên để không bóp hẹp chữ trên đt */
+    padding: 30px 5%;
+    display: flex;
+    flex-direction: column; /* THÊM MỚI: Xếp dọc văn bản và ảnh trên đt */
+    justify-content: center;
+    align-items: center;
+    gap: 24px; /* SỬA: Giảm từ 80px xuống 24px */
+}
+
+.story_content {
+    display: block;
+    width: 100%; /* SỬA: Đổi từ 80% thành 100% cho mobile */
+}
+
+.green-bar {
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    border-radius: 15px;
+    background-color: #1a8f55;
+    margin-right: 8px;
+}
+
+.story_content h2 {
+    color: #0b512e;
+    font-size: 24px; 
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.story_content p {
+    color: #202121;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.main-story {
+    color: #135534;
+    font-weight: 700;
+}
+
+.images_story_photo2, 
+.images_story_photo1 {
+    display: block;
+    border-radius: 20px;
+    width: 100%; /* SỬA: Đổi width: 540px thành 100% để ảnh co vừa màn hình đt */
+    height: 240px; /* SỬA: Giảm chiều cao từ 380px xuống 240px cho cân đối trên đt */
+    object-fit: cover; /* THÊM MỚI: Giữ ảnh không bị méo khi co giãn */
+    transition: transform 0.3s ease;
+}
+.images_story_photo1:hover,
+.images_story_photo2:hover {
+    transform: scale(1.02);
+}
+
+
+/* MISSION */
+.mission {
+    display: flex;
+    flex-direction: column; /* THÊM MỚI: Xếp dọc các khối trên đt */
+    gap: 24px;
+    background-color: #e6f4ea;
+    width: 100%;
+    margin: 40px 0;
+    padding: 30px 5%;
+}
+
+.mission h2 {
+    color: #0b512e;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+}
+
+.mission_cards {
+    display: block;
+}
+
+.mission_cards-content {
+    display: flex;
+    flex-direction: column; /* THÊM MỚI: Các thẻ sứ mệnh xếp dọc trên đt */
+    gap: 16px;
+}
+
+.mission_cards-item {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px; /* SỬA: Tăng padding từ 12px lên 20px cho chữ đỡ sát viền */
+    background-color: #f1f5f4;
+    border-radius: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.mission_cards-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 8px 0;
+    color: #0b512e;
+}
+
+.mission_cards-item p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #202121;
+    font-weight: 500;
+}
+
+.mission_cards-item-icon i {
+    font-size: 36px;
+    color: #8dbe62;
+    margin: 0 0 8px 0; /* SỬA: Bỏ margin âm (-60px 319px...) vì sẽ đẩy icon bay khỏi thẻ trên đt */
+    display: block;
+}
+
+.mission_cards-item:hover {
+    transform: scale(1.02);
+}
+
+.images_mission {
+    display: block;
+    position: relative;
+    border-radius: 16px;
+    width: 100%; /* SỬA: Đổi từ 80% thành 100% trên đt */
+    padding: 0;
+}
+
+.images_mission_photo {
+    width: 100%; /* SỬA: Đổi từ 620px thành 100% để không tràn màn hình đt */
+    height: 220px; /* SỬA: Giảm từ 300px xuống 220px */
+    object-fit: cover;
+    display: block;
+    border-radius: 24px;
+    margin: 0;
+    filter: brightness(0.85);
+    position: relative;
+    z-index: 0;
+    transition: filter 0.3s ease;
+}
+
+.images_mission_photo:hover {
+    filter: brightness(1.1);
+}
+
+.images_mission p {
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    top: 50%; /* SỬA: Căn giữa chuẩn 50% - 50% thay vì 46% - 32% */
+    left: 50%;
+    width: 85%; /* THÊM MỚI: Giới hạn chiều rộng chữ trên ảnh để tự xuống dòng gọn */
+    font-family: 'Dancing Script', cursive;
+    color: #ffffff;  
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);  
+    font-size: 18px;        
+    font-weight: 700;      
+    font-style: italic;     
+    text-align: center;    
+    line-height: 1.4;
+}
+/* BENEFIT */
+.benefit {
+    width: 100%;
+    margin: 0 auto;
+    padding: 35px 5%;
+    box-sizing: border-box;
+}
+
+.benefit h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px; /* SỬA: Giảm từ 24px xuống 20px */
+    font-weight: 800;
+    color: #0b3c38;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+/* sắp theo dọc trên mobile */
+.benefit-container {
+    display: grid;
+    grid-template-columns: 1fr; /* SỬA: Mặc định 1 cột trên điện thoại */
+    gap: 20px;
+}
+
+.benefit-card {
+    background: #f7fafc;
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;  
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: scale(1.03); /* SỬA: Giảm độ phóng từ 1.1 xuống 1.03 để không bị tràn viền đt */
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto; /* SỬA: Bỏ margin âm (-62px 272px...) để icon luôn nằm giữa thẻ */
+    color: #efecec;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.icon-box.green  { background-color: #20b775; } 
+.icon-box.orange { background-color: #ff7839; } 
+.icon-box.yellow { background-color: #ffb900; } 
+
+.benefit-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0c2d27;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    font-size: 15px; /* SỬA: Giảm từ 18px xuống 15px */
+    line-height: 1.6;
+    color: #556068;
+    margin: 0;
+}
+
+.benefit-card:hover .icon-box {
+    transform: scale(1.1);
+}
+
+
+/* STATS */
+.stats {
+    max-width: 92%;
+    margin: 30px auto;
+    padding: 24px 20px;
+    background-color: #0f543e;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column; /* THÊM MỚI: Xếp dọc các con số thống kê trên đt */
+    align-items: flex-start; /* SỬA: Căn trái thẳng hàng trên đt */
+    gap: 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.stats_intro {
+    width: 100%;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* SỬA: Đổi gạch dọc thành gạch ngang ngăn cách trên đt */
+}
+
+.stats_intro h3 {
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stats_intro p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0; /* SỬA: Bỏ margin: 20px bị lệch */
+}
+
+.doitac, .luotdat, .luotthu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* SỬA: Căn trái thẳng hàng trên đt */
+    gap: 16px;
+    padding: 0;
+}
+
+.icon_stats {
+    width: 64px; /* SỬA: Thu nhỏ từ 100px xuống 64px cho cân đối trên đt */
+    height: 64px;
+    background-color: #177054; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon_stats img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.stats_content p {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 2px 0;
+    line-height: 1.1;
+}
+
+.stats_content h2 {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 6px 0 0 0;
+}
+
+
+/* TEAM: MẶC ĐỊNH 1 CỘT DỌC TRÊN ĐIỆN THOẠI */
+.team {
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 0 5%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr; /* SỬA: Đổi từ repeat(6, 1fr) thành 1fr trên đt */
+    gap: 16px;
+}
+
+.team h2 {
+    grid-column: 1 / -1;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #0b3b59;
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nguoi1, .nguoi2, .nguoi3, .nguoi4, .nguoi5 {
+    background-color: #f6f9fc;
+    border: 1px solid #edf2f7;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nguoi1:hover, .nguoi2:hover, .nguoi3:hover, .nguoi4:hover, .nguoi5:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+.images_team_photo1,
+.images_team_photo2,
+.images_team_photo3,
+.images_team_photo4,
+.images_team_photo5 {
+    width: 80px; /* SỬA: Thu nhỏ ảnh từ 105px xuống 80px trên đt */
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: #e2e8f0;
+}
+
+.images_team_photo1 img,
+.images_team_photo2 img,
+.images_team_photo3 img,
+.images_team_photo4 img,
+.images_team_photo5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.team_info h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0b3b59;
+    margin: 0 0 4px 0;
+}
+
+.team_info .role {
+    font-size: 14px;
+    font-weight: 600;
+    color: #20b775;
+    margin: 0 0 4px 0;
+}
+
+.team_info .quote {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0;
+}
+
+
+/* ĐẶT SÂN NGAY */
+.datsan_ngay {
+    width: 100%;
+    background-color: #f1f8f7;
+    padding: 32px 5%;
+    margin: 32px 0;
+    box-sizing: border-box;
+}
+
+.datsan_khung {
+    display: flex;
+    flex-direction: column; /* THÊM MỚI: Xếp dọc 2 khối đặt sân trên đt */
+    align-items: center;
+    gap: 24px;
+}
+
+.datsan_trai,
+.san_phai {
+    display: flex;
+    flex-direction: column; /* THÊM MỚI: Xếp dọc icon, chữ và nút trên đt */
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.datsan_anh {
+    flex-shrink: 0;
+}
+
+.datsan_anh img {
+    width: 100px;
+    height: 115px;
+    border-radius: 220px;
+    object-fit: contain;
+    display: block;
+}
+
+.vach_giua {
+    width: 80%; /* SỬA: Đổi vạch dọc (1px x 115px) thành vạch ngang (80% x 1px) trên đt */
+    height: 1px;
+    background-color: #c5ded9;
+    flex-shrink: 0;
+}
+
+.icon_xemsan {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #d8efe9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon_xemsan i {
+    font-size: 32px;
+    color: #156a41;
+}
+
+.datsan_noidung_trai h2 {
+    font-size: 19px;
+    font-weight: 800;
+    color: #156a41;
+    margin: 0 0 6px 0;
+    letter-spacing: 0.2px;
+}
+
+.datsan_noidung_phai h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #156a41;
+    margin: 0 0 6px 0;
+}
+
+.datsan_noidung_trai p,
+.datsan_noidung_phai p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #334155;
+    line-height: 1.5;
+    margin: 0 0 16px 0;
+}
+
+/* nút màu cam */
+.nut_datsan {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f26522;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 26px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(242, 101, 34, 0.24);
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.nut_datsan:hover {
+    background-color: #dc5312;
+    transform: translateY(-2px);
+}
+
+/* nút viền xanh: Xem sân */
+.nut_xemsan {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    border: 1.5px solid #20b775;
+    color: #156a41;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 11px 26px;
+    border-radius: 50px;
+    transition: all 0.25s ease;
+}
+
+.nut_xemsan:hover {
+    background-color: #20b775;
+    color: #ffffff;
+}
+
+.muiten {
+    font-size: 14px;
+    transition: transform 0.25s ease;
+}
+
+.nut_datsan:hover .muiten,
+.nut_xemsan:hover .muiten {
+    transform: translateX(4px);
+}
+
+
+/* FAQ */
+.faq {
+    padding: 32px 5%;
+    background-color: #e6f4ea;
+}
+
+.faq h2 {
+    color: #0b512e;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.faq_item {
+    background-color: #ffffff;
+    margin-bottom: 12px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.faq_question {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0b512e;
+}
+
+.faq_answer {
+    display: none;
+    padding: 0 16px 16px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202121;
+}
+
+.faq_answer.hien {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1024px) {
+.banner {
+    position: relative;
+    display: flex;
+    flex-direction: row; 
     align-items: center;
     justify-content: space-between;
     margin: 0;
@@ -90,6 +758,7 @@ a {
     height: 100%;
     object-fit: cover;
     border-radius: 0;
+    box-shadow: none; /* THÊM MỚI: Tắt đổ bóng của mobile */
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
     mask-image: linear-gradient(to right, transparent 0%, black 40%);
 }
@@ -100,6 +769,7 @@ a {
     max-width: auto;
     padding: 40px 20px;
     display: flex;
+    flex-direction: row; /* THÊM MỚI: Trả lại xếp ngang trên PC */
     justify-content: center;
     align-items: center;
     gap: 80px;
@@ -161,6 +831,7 @@ a {
 }
 .mission {
     display: flex;
+    flex-direction: row; /* THÊM MỚI: Trả lại xếp ngang trên PC */
     gap: 18px;                 
     background-color: #e6f4ea;
     width: 100%;
@@ -180,6 +851,7 @@ a {
 }
 .mission_cards-content{
     display: flex;
+    flex-direction: row; /* THÊM MỚI: Trả lại 2 thẻ sứ mệnh nằm ngang */
     gap: 20px;
     /* height: 100%; */
 }
@@ -240,6 +912,7 @@ body > header {
     transform: translate(-50%, -50%);
     top: 46%;
     left: 32%;
+    width: auto; /* THÊM MỚI: Xóa width: 85% của mobile để không bị lệch vị trí */
     font-family: 'Dancing Script', cursive;
     color: #ffffff;  
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);  
@@ -250,6 +923,7 @@ body > header {
     line-height: 1.4;;
 }
 .mission_cards-item-icon i {
+    display: inline-block; /* THÊM MỚI: Trả lại kiểu hiển thị gốc cho icon */
     font-size: 40px;
     color: #8dbe62;
     margin: -60px 319px 5px -23px;
@@ -340,6 +1014,7 @@ body > header {
     background-color: #0f543e;
     border-radius: 16px;
     display: flex;
+    flex-direction: row; /* THÊM MỚI: Trả lại xếp ngang trên PC */
     align-items: center;
     justify-content: space-between;
     gap: 20px;
@@ -347,8 +1022,11 @@ body > header {
     color: #ffffff;
 }
 .stats_intro {
+    width: auto; /* THÊM MỚI */
     flex: 1.2;
     padding-right: 25px;
+    padding-bottom: 0; /* THÊM MỚI */
+    border-bottom: none; /* THÊM MỚI: Xóa đường gạch ngang của mobile */
     border-right: 1px solid rgba(255, 255, 255, 0.2); 
 }
 .icon_stats img {
@@ -373,6 +1051,7 @@ body > header {
     margin: 20px;
 }
 .doitac, .luotdat {
+    width: auto; /* THÊM MỚI */
     flex: 1;
     display: flex;
     align-items: center;
@@ -382,6 +1061,7 @@ body > header {
     border-right: 1px solid rgba(255, 255, 255, 0.2); 
 }
  .luotthu {
+    width: auto; /* THÊM MỚI */
     flex: 1;
     display: flex;
     align-items: center;
@@ -428,9 +1108,7 @@ body > header {
     height: 30px;
     object-fit: contain;
 } */
-/* ==========================================
-   TEAM: TẦNG 1 (NGƯỜI 1, 2) - TẦNG 2 (NGƯỜI 3, 4, 5)
-   ========================================== */
+
 
 .team {
     max-width: 97%;
@@ -550,6 +1228,7 @@ body > header {
     max-width: 1260px;
     margin: 0 auto;
     display: flex;
+    flex-direction: row; /* THÊM MỚI: Trả lại xếp ngang trên PC */
     align-items: center;
     justify-content: space-between;
     gap: 32px;
@@ -559,6 +1238,8 @@ body > header {
 .datsan_trai {
     flex: 1.15;
     display: flex;
+    flex-direction: row; /* THÊM MỚI */
+    text-align: left; /* THÊM MỚI: Trả lại căn trái thay vì căn giữa của mobile */
     align-items: center;
     gap: 28px;
 }
@@ -566,6 +1247,8 @@ body > header {
 .san_phai {
     flex: 1;
     display: flex;
+    flex-direction: row; /* THÊM MỚI */
+    text-align: left; /* THÊM MỚI */
     align-items: center;
     gap: 24px;
 }
@@ -732,10 +1415,4 @@ body > header {
 .faq_answer.hien {
     display: block;
 }
-
-
-
-
-
-
-
+}

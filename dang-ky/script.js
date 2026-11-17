@@ -34,35 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-    async function bamMatKhau(mk) {
-        const salt = crypto.getRandomValues(new Uint8Array(16));
-        const encoder = new TextEncoder();
-
-        const key = await crypto.subtle.importKey(
-            "raw",
-            encoder.encode(mk),
-            "PBKDF2",
-            false,
-            ["deriveBits"]
-        );
-
-        const bits = await crypto.subtle.deriveBits({
-            name: "PBKDF2",
-            salt: salt,
-            iterations: 100000,
-            hash: "SHA-256"
-        }, key, 256);
-
-        function chuyenHex(bytes) {
-            return Array.from(bytes, function (byte) {
-                return byte.toString(16).padStart(2, "0");
-            }).join("");
-        }
-
-        return chuyenHex(salt) + ":" +
-            chuyenHex(new Uint8Array(bits));
-    }
-
     form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
@@ -137,7 +108,7 @@ try {
 
     // tao id va bam mk
     const id = crypto.randomUUID();
-    const passwordHash = await bamMatKhau(password);
+    // const passwordHash = await bamMatKhau(password);
 
 
     localStorage.setItem(khoa, JSON.stringify({
@@ -145,7 +116,7 @@ try {
         numberPhone: numberPhone,
         firstName: firstName,
         lastName: lastName,
-        password: passwordHash
+        password: password
     }));
 
     // tb dki tcong
