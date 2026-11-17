@@ -1,31 +1,28 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-
     const form = document.getElementById("form_dang_ky");
-    const hoTen = document.getElementById("ho_ten");
-    const email = document.getElementById("email");
-    const matKhau = document.getElementById("mat_khau");
-    const nhapLaiMatKhau = document.getElementById("nhap_lai_mat_khau");
+    const ho = document.getElementById("lastName");
+    const ten = document.getElementById("firstName");
+    const soDienThoai = document.getElementById("numberPhone");
+    const matKhau = document.getElementById("password");
+    const nhapLaiMatKhau = document.getElementById("confirmPassword");
     const dieuKhoan = document.getElementById("dong_y_dieu_khoan");
     const thongBao = document.getElementById("hop_thong_bao");
 
-    // Kiểm tra form có tồn tại khôngs
-    if (!form || !thongBao) {
-        console.error("Không tìm thấy form đăng ký hoặc hộp thông báo!");
-        return;
-    }
+    // hien thi thong bao
     function hienThiThongBao(noiDung, loai) {
         thongBao.textContent = noiDung;
         thongBao.className = "hop_thong_bao " + loai;
     }
 
-    // hien or an mk
+    // hien an mat khau
     const cacNutMatKhau = document.querySelectorAll(".nut_an_hien_mk");
 
     cacNutMatKhau.forEach(function (nut) {
         nut.addEventListener("click", function () {
-            const idInput = nut.getAttribute("data-target");
-            const input = document.getElementById(idInput);
+            const input = document.getElementById(
+                nut.getAttribute("data-target")
+            );
             const icon = nut.querySelector("i");
 
             if (input.type === "password") {
@@ -37,34 +34,68 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+    async function bamMatKhau(mk) {
+        const salt = crypto.getRandomValues(new Uint8Array(16));
+        const encoder = new TextEncoder();
 
-    
-    form.addEventListener("submit", function (event) {
+        const key = await crypto.subtle.importKey(
+            "raw",
+            encoder.encode(mk),
+            "PBKDF2",
+            false,
+            ["deriveBits"]
+        );
+
+        const bits = await crypto.subtle.deriveBits({
+            name: "PBKDF2",
+            salt: salt,
+            iterations: 100000,
+            hash: "SHA-256"
+        }, key, 256);
+
+        function chuyenHex(bytes) {
+            return Array.from(bytes, function (byte) {
+                return byte.toString(16).padStart(2, "0");
+            }).join("");
+        }
+
+        return chuyenHex(salt) + ":" +
+            chuyenHex(new Uint8Array(bits));
+    }
+
+    form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
-        const ten = hoTen.value.trim();
-        const mail = email.value.trim().toLowerCase();
-        const mk = matKhau.value;
-        const nhapLaiMk = nhapLaiMatKhau.value;
+        const lastName = ho.value.trim();
+        const firstName = ten.value.trim();
+        const numberPhone = soDienThoai.value.trim();
+        const password = matKhau.value;
+        const confirmPassword = nhapLaiMatKhau.value;
 
-        // check hten
-        if (ten === "") {
-            hienThiThongBao("Vui lòng nhập họ và tên!", "loi");
-            hoTen.focus();
+        if (lastName === "") {
+            hienThiThongBao("Vui lòng nhập họ và tên đệm!", "loi");
+            ho.focus();
             return;
         }
 
-        // check mail
-        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!regexEmail.test(mail)) {
-            hienThiThongBao("Email không hợp lệ!", "loi");
-            email.focus();
+        if (firstName === "") {
+            hienThiThongBao("Vui lòng nhập tên!", "loi");
+            ten.focus();
             return;
         }
 
-        // ktra mk
-        if (mk.length < 8) {
+        // ktra sdt
+        const regexSdt = /^0[0-9]{9}$/;
+
+        if (!regexSdt.test(numberPhone)) {
+            hienThiThongBao(
+                "Số điện thoại phải có 10 chữ số và bắt đầu bằng số 0!",
+                "loi"
+            );
+            soDienThoai.focus();
+            return;
+        }
+        if (password.length < 8) {
             hienThiThongBao(
                 "Mật khẩu phải có ít nhất 8 ký tự!",
                 "loi"
@@ -73,8 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // ktra nhap mk
-        if (mk !== nhapLaiMk) {
+        // nhap pass lan 2
+        if (password !== confirmPassword) {
             hienThiThongBao(
                 "Mật khẩu nhập lại không khớp!",
                 "loi"
@@ -83,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // check dieu khonan
+        // dieu khoan
         if (!dieuKhoan.checked) {
             hienThiThongBao(
                 "Vui lòng đồng ý với điều khoản sử dụng!",
@@ -92,46 +123,55 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // check mail trung
-        try {
-            const emailDaTonTai = localStorage.getItem(
-                "taiKhoan_" + mail
-            );
+try {
+    const khoa = `account:${numberPhone}`;
+    // ktra sdt
+    if (localStorage.getItem(khoa) !== null) {
+        hienThiThongBao(
+            "Số điện thoại này đã được đăng ký!",
+            "loi"
+        );
+        soDienThoai.focus();
+        return;
+    }
 
-            if (emailDaTonTai !== null) {
-                hienThiThongBao(
-                    "Email này đã được đăng ký!",
-                    "loi"
-                );
-                email.focus();
-                return;
-            }
+    // tao id va bam mk
+    const id = crypto.randomUUID();
+    const passwordHash = await bamMatKhau(password);
 
-            // luu thong tin
-            localStorage.setItem("taiKhoan_" + mail, ten);
 
-            
-            hienThiThongBao(
-                "Đăng ký thành công! Đang chuyển đến trang Về chúng tôi...",
-                "thanh_cong"
-            );
+    localStorage.setItem(khoa, JSON.stringify({
+        id: id,
+        numberPhone: numberPhone,
+        firstName: firstName,
+        lastName: lastName,
+        password: passwordHash
+    }));
 
-            // delete form data
-            form.reset();
+    // tb dki tcong
+    hienThiThongBao(
+        "Đăng ký thành công! Chào mừng " +
+        lastName + " " + firstName +
+        " đến với BadmintonPlus!",
+        "thanh_cong"
+    );
 
-            // chuyen page
-            setTimeout(function () {
-                window.location.href = form.dataset.redirect;
-            }, 1500);
+    // delete form date
+    form.reset();
 
-        } catch (error) {
-            console.error("Lỗi đăng ký:", error);
+    // chuyen sang trang ve chung toi
+    setTimeout(function () {
+        window.location.href = form.dataset.redirect;
+    }, 1500);
 
-            hienThiThongBao(
-                "Không thể lưu thông tin đăng ký!",
-                "loi"
-            );
-        }
+} catch (error) {
+    console.error("Lỗi đăng ký:", error);
+
+    hienThiThongBao(
+        "Không thể lưu thông tin đăng ký!",
+        "loi"
+    );
+}
+
     });
-
 });
