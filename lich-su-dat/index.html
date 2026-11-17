@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lịch sử đặt sân</title>
-    <script src="/assets/scripts/courts-data.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/assets/global.css">
     <script type="module" src="/assets/scripts/header.js"></script>
@@ -91,8 +90,7 @@
 
             <select id="filter-status">
                 <option value="all">Tất cả trạng thái</option>
-                <option value="pending">Chờ xác nhận</option>
-                <option value="confirmed">Đã xác nhận</option>
+                <option value="upcoming">Sắp tới</option>
                 <option value="done">Đã hoàn thành</option>
                 <option value="cancelled">Đã hủy</option>
             </select>
@@ -131,6 +129,8 @@
         </div>
     </dialog>
 
+    <script src="/assets/scripts/courts-data.js"></script>
+    <script src="script.js"></script>
     <footer>
         © 2026 - Nhóm 5
     </footer>

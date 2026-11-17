@@ -168,6 +168,7 @@ button:focus-visible {
   color: #7a5b00;
 }
 
+.badge-upcoming,
 .badge-confirmed {
   background: #d9ecff;
   color: #0b4f8a;
