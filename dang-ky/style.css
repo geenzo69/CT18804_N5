@@ -35,7 +35,7 @@ a {
 }
 .the_dang_ky {
     position: relative;
-    z-index: 2;        /* Đưa khung đăng ký nổi lên trên ảnh nền */
+    z-index: 2;      
     width: 100%;
     max-width: 440px;
     background-color: #ffffff;

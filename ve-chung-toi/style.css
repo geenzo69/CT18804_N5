@@ -20,7 +20,7 @@ a {
 }
 /* MOBILE-FIRST */
 /* BANNER */
-
+/* @media (min-width: 740px) { */
 
 .banner {
     position: relative;
@@ -84,18 +84,20 @@ a {
 
 
 .story {
-    margin: 0; /* SỬA: Bỏ margin 40px hai bên để không bóp hẹp chữ trên đt */
+    margin: 0; 
     padding: 30px 5%;
     display: flex;
-    flex-direction: column; /* THÊM MỚI: Xếp dọc văn bản và ảnh trên đt */
+    flex-direction: row; 
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 24px; /* SỬA: Giảm từ 80px xuống 24px */
+    gap: 24px;
 }
 
 .story_content {
     display: block;
-    width: 100%; /* SỬA: Đổi từ 80% thành 100% cho mobile */
+    width: 100%;
+    order: -1;
 }
 
 .green-bar {
@@ -130,9 +132,9 @@ a {
 .images_story_photo1 {
     display: block;
     border-radius: 20px;
-    width: 100%; /* SỬA: Đổi width: 540px thành 100% để ảnh co vừa màn hình đt */
-    height: 240px; /* SỬA: Giảm chiều cao từ 380px xuống 240px cho cân đối trên đt */
-    object-fit: cover; /* THÊM MỚI: Giữ ảnh không bị méo khi co giãn */
+    width: 100%; 
+    height: 240px; 
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 .images_story_photo1:hover,
@@ -144,7 +146,7 @@ a {
 /* MISSION */
 .mission {
     display: flex;
-    flex-direction: column; /* THÊM MỚI: Xếp dọc các khối trên đt */
+    flex-direction: column;
     gap: 24px;
     background-color: #e6f4ea;
     width: 100%;
@@ -165,14 +167,14 @@ a {
 
 .mission_cards-content {
     display: flex;
-    flex-direction: column; /* THÊM MỚI: Các thẻ sứ mệnh xếp dọc trên đt */
+    flex-direction: column;
     gap: 16px;
 }
 
 .mission_cards-item {
     width: 100%;
     box-sizing: border-box;
-    padding: 20px; /* SỬA: Tăng padding từ 12px lên 20px cho chữ đỡ sát viền */
+    padding: 20px; 
     background-color: #f1f5f4;
     border-radius: 24px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -196,7 +198,7 @@ a {
 .mission_cards-item-icon i {
     font-size: 36px;
     color: #8dbe62;
-    margin: 0 0 8px 0; /* SỬA: Bỏ margin âm (-60px 319px...) vì sẽ đẩy icon bay khỏi thẻ trên đt */
+    margin: 0 0 8px 0;
     display: block;
 }
 
@@ -208,13 +210,13 @@ a {
     display: block;
     position: relative;
     border-radius: 16px;
-    width: 100%; /* SỬA: Đổi từ 80% thành 100% trên đt */
+    width: 100%;
     padding: 0;
 }
 
 .images_mission_photo {
-    width: 100%; /* SỬA: Đổi từ 620px thành 100% để không tràn màn hình đt */
-    height: 220px; /* SỬA: Giảm từ 300px xuống 220px */
+    width: 100%; 
+    height: 220px; 
     object-fit: cover;
     display: block;
     border-radius: 24px;
@@ -233,9 +235,9 @@ a {
     position: absolute;
     z-index: 2;
     transform: translate(-50%, -50%);
-    top: 50%; /* SỬA: Căn giữa chuẩn 50% - 50% thay vì 46% - 32% */
+    top: 50%;
     left: 50%;
-    width: 85%; /* THÊM MỚI: Giới hạn chiều rộng chữ trên ảnh để tự xuống dòng gọn */
+    width: 85%; 
     font-family: 'Dancing Script', cursive;
     color: #ffffff;  
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);  
@@ -257,7 +259,7 @@ a {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 20px; /* SỬA: Giảm từ 24px xuống 20px */
+    font-size: 20px; 
     font-weight: 800;
     color: #0b3c38;
     text-transform: uppercase;
@@ -267,7 +269,7 @@ a {
 /* sắp theo dọc trên mobile */
 .benefit-container {
     display: grid;
-    grid-template-columns: 1fr; /* SỬA: Mặc định 1 cột trên điện thoại */
+    grid-template-columns: 1fr; 
     gap: 20px;
 }
 
@@ -280,7 +282,7 @@ a {
 }
 
 .benefit-card:hover {
-    transform: scale(1.03); /* SỬA: Giảm độ phóng từ 1.1 xuống 1.03 để không bị tràn viền đt */
+    transform: scale(1.03);
 }
 
 .icon-box {
@@ -290,15 +292,21 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 16px auto; /* SỬA: Bỏ margin âm (-62px 272px...) để icon luôn nằm giữa thẻ */
+    margin: 0 auto 16px auto;
     color: #efecec;
     font-size: 24px;
     transition: transform 0.3s ease;
 }
 
-.icon-box.green  { background-color: #20b775; } 
-.icon-box.orange { background-color: #ff7839; } 
-.icon-box.yellow { background-color: #ffb900; } 
+.icon-box.green  { 
+    background-color: #20b775; 
+} 
+.icon-box.orange { 
+    background-color: #ff7839; 
+} 
+.icon-box.yellow {
+     background-color: #ffb900;
+ } 
 
 .benefit-card h3 {
     font-size: 20px;
@@ -308,7 +316,7 @@ a {
 }
 
 .benefit-card p {
-    font-size: 15px; /* SỬA: Giảm từ 18px xuống 15px */
+    font-size: 15px;
     line-height: 1.6;
     color: #556068;
     margin: 0;
@@ -327,8 +335,8 @@ a {
     background-color: #0f543e;
     border-radius: 16px;
     display: flex;
-    flex-direction: column; /* THÊM MỚI: Xếp dọc các con số thống kê trên đt */
-    align-items: flex-start; /* SỬA: Căn trái thẳng hàng trên đt */
+    flex-direction: column; 
+    align-items: flex-start; 
     gap: 20px;
     box-sizing: border-box;
     color: #ffffff;
@@ -337,7 +345,7 @@ a {
 .stats_intro {
     width: 100%;
     padding-bottom: 16px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* SỬA: Đổi gạch dọc thành gạch ngang ngăn cách trên đt */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
 }
 
 .stats_intro h3 {
@@ -355,20 +363,20 @@ a {
     font-size: 15px;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.85);
-    margin: 0; /* SỬA: Bỏ margin: 20px bị lệch */
+    margin: 0; 
 }
 
 .doitac, .luotdat, .luotthu {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* SỬA: Căn trái thẳng hàng trên đt */
+    justify-content: flex-start; 
     gap: 16px;
     padding: 0;
 }
 
 .icon_stats {
-    width: 64px; /* SỬA: Thu nhỏ từ 100px xuống 64px cho cân đối trên đt */
+    width: 64px;
     height: 64px;
     background-color: #177054; 
     border-radius: 50%;
@@ -408,7 +416,7 @@ a {
     padding: 0 5%;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr; /* SỬA: Đổi từ repeat(6, 1fr) thành 1fr trên đt */
+    grid-template-columns: 1fr; 
     gap: 16px;
 }
 
@@ -445,7 +453,7 @@ a {
 .images_team_photo3,
 .images_team_photo4,
 .images_team_photo5 {
-    width: 80px; /* SỬA: Thu nhỏ ảnh từ 105px xuống 80px trên đt */
+    width: 80px; 
     height: 80px;
     border-radius: 10px;
     overflow: hidden;
@@ -496,7 +504,7 @@ a {
 
 .datsan_khung {
     display: flex;
-    flex-direction: column; /* THÊM MỚI: Xếp dọc 2 khối đặt sân trên đt */
+    flex-direction: column; 
     align-items: center;
     gap: 24px;
 }
@@ -504,7 +512,7 @@ a {
 .datsan_trai,
 .san_phai {
     display: flex;
-    flex-direction: column; /* THÊM MỚI: Xếp dọc icon, chữ và nút trên đt */
+    flex-direction: column; 
     align-items: center;
     text-align: center;
     gap: 16px;
@@ -523,7 +531,7 @@ a {
 }
 
 .vach_giua {
-    width: 80%; /* SỬA: Đổi vạch dọc (1px x 115px) thành vạch ngang (80% x 1px) trên đt */
+    width: 80%; 
     height: 1px;
     background-color: #c5ded9;
     flex-shrink: 0;
@@ -672,18 +680,6 @@ a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media (min-width: 1024px) {
 .banner {
     position: relative;
@@ -758,7 +754,7 @@ a {
     height: 100%;
     object-fit: cover;
     border-radius: 0;
-    box-shadow: none; /* THÊM MỚI: Tắt đổ bóng của mobile */
+    box-shadow: none;
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
     mask-image: linear-gradient(to right, transparent 0%, black 40%);
 }
@@ -769,7 +765,8 @@ a {
     max-width: auto;
     padding: 40px 20px;
     display: flex;
-    flex-direction: row; /* THÊM MỚI: Trả lại xếp ngang trên PC */
+    flex-direction: row; 
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     gap: 80px;
@@ -779,6 +776,7 @@ a {
     display: inline-block;
     width: 80%;
     max-width: 1100px;
+    order: 0;
    
 }
 .green-bar{
@@ -831,7 +829,7 @@ a {
 }
 .mission {
     display: flex;
-    flex-direction: row; /* THÊM MỚI: Trả lại xếp ngang trên PC */
+    flex-direction: row; 
     gap: 18px;                 
     background-color: #e6f4ea;
     width: 100%;
@@ -851,7 +849,7 @@ a {
 }
 .mission_cards-content{
     display: flex;
-    flex-direction: row; /* THÊM MỚI: Trả lại 2 thẻ sứ mệnh nằm ngang */
+    flex-direction: row; 
     gap: 20px;
     /* height: 100%; */
 }
@@ -912,7 +910,7 @@ body > header {
     transform: translate(-50%, -50%);
     top: 46%;
     left: 32%;
-    width: auto; /* THÊM MỚI: Xóa width: 85% của mobile để không bị lệch vị trí */
+    width: auto; 
     font-family: 'Dancing Script', cursive;
     color: #ffffff;  
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);  
@@ -923,7 +921,7 @@ body > header {
     line-height: 1.4;;
 }
 .mission_cards-item-icon i {
-    display: inline-block; /* THÊM MỚI: Trả lại kiểu hiển thị gốc cho icon */
+    display: inline-block;
     font-size: 40px;
     color: #8dbe62;
     margin: -60px 319px 5px -23px;
@@ -944,25 +942,25 @@ body > header {
     display: flex;
     align-items: center;
     gap: 10px;
-    /* font-family: 'Roboto', sans-serif; */
     font-size: 24px;
     font-weight: 800;
     color: #0b3c38;
     text-transform: uppercase;
     margin-bottom: 38px;
 }
- /* sắp theo ngang */
+
 .benefit-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 24px;
 }
-.benefit-card {
-    background: #f7fafc;
-    border-radius: 16px;
-    padding: 35px 25px;
-    text-align: center;  
-}
+    .benefit-card {
+        background: #f7fafc;
+        border-radius: 16px;
+        padding: 35px 25px;
+        text-align: center;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
 .benefit-card:hover {
      transform: scale(1.1);
     transition: transform 0.3s ease;
@@ -1014,7 +1012,7 @@ body > header {
     background-color: #0f543e;
     border-radius: 16px;
     display: flex;
-    flex-direction: row; /* THÊM MỚI: Trả lại xếp ngang trên PC */
+    flex-direction: row; 
     align-items: center;
     justify-content: space-between;
     gap: 20px;
@@ -1022,11 +1020,11 @@ body > header {
     color: #ffffff;
 }
 .stats_intro {
-    width: auto; /* THÊM MỚI */
+    width: auto; 
     flex: 1.2;
     padding-right: 25px;
-    padding-bottom: 0; /* THÊM MỚI */
-    border-bottom: none; /* THÊM MỚI: Xóa đường gạch ngang của mobile */
+    padding-bottom: 0; 
+    border-bottom: none; 
     border-right: 1px solid rgba(255, 255, 255, 0.2); 
 }
 .icon_stats img {
@@ -1051,7 +1049,7 @@ body > header {
     margin: 20px;
 }
 .doitac, .luotdat {
-    width: auto; /* THÊM MỚI */
+    width: auto; 
     flex: 1;
     display: flex;
     align-items: center;
@@ -1061,7 +1059,7 @@ body > header {
     border-right: 1px solid rgba(255, 255, 255, 0.2); 
 }
  .luotthu {
-    width: auto; /* THÊM MỚI */
+    width: auto; 
     flex: 1;
     display: flex;
     align-items: center;
@@ -1147,6 +1145,7 @@ body > header {
 .nguoi1:hover, .nguoi2:hover, .nguoi3:hover, .nguoi4:hover, .nguoi5:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid green;
 }
 
 
@@ -1228,7 +1227,7 @@ body > header {
     max-width: 1260px;
     margin: 0 auto;
     display: flex;
-    flex-direction: row; /* THÊM MỚI: Trả lại xếp ngang trên PC */
+    flex-direction: row; 
     align-items: center;
     justify-content: space-between;
     gap: 32px;
@@ -1238,8 +1237,8 @@ body > header {
 .datsan_trai {
     flex: 1.15;
     display: flex;
-    flex-direction: row; /* THÊM MỚI */
-    text-align: left; /* THÊM MỚI: Trả lại căn trái thay vì căn giữa của mobile */
+    flex-direction: row; 
+    text-align: left;
     align-items: center;
     gap: 28px;
 }
@@ -1247,8 +1246,8 @@ body > header {
 .san_phai {
     flex: 1;
     display: flex;
-    flex-direction: row; /* THÊM MỚI */
-    text-align: left; /* THÊM MỚI */
+    flex-direction: row;
+    text-align: left; 
     align-items: center;
     gap: 24px;
 }

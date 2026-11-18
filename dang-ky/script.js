@@ -108,10 +108,10 @@ try {
 
     // tao id va bam mk
     const id = crypto.randomUUID();
-    // const passwordHash = await bamMatKhau(password);
 
 
-    localStorage.setItem(khoa, JSON.stringify({
+// ghi đè lên k cần xóa
+    localStorage.setItem('khoa', JSON.stringify({
         id: id,
         numberPhone: numberPhone,
         firstName: firstName,
