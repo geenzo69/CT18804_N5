@@ -1,0 +1,61 @@
+body{
+    margin: 0px auto;
+    min-height: 100vh;
+}
+h1{
+    text-align: center;
+}
+main{
+    display:flex;
+    align-items: center;
+    margin-top:100px;
+}
+.Login__form{
+    padding:20px;
+    border: solid 5px green;
+    margin:0 auto;
+    width: 480px;
+    height:300px;
+}
+.Login__form label,
+.Login__form--input,
+.Login__form--forgot,
+.Register {
+    display: block;
+}
+.Login__form--input{
+    border-radius: 10px;
+    width: 400px;
+    height: 35px;
+    padding: 10px;
+    margin: 5px;
+}
+.Login__form--forgot{
+    width:150px;
+    text-align: right;
+    padding:5px;
+    text-decoration: none;
+}
+.Register{
+    width:175px;
+    text-align: left;
+    padding:5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.Login__form--submit{
+    background-color: lightgreen;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+}
+.Login__form--status{
+    color:red;
+    margin-bottom: 5px;
+}
+@media screen and (max-width:600px) {
+    main{
+        position:sticky;
+        top:100px;
+    }
+}
