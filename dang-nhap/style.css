@@ -26,7 +26,7 @@ main{
 }
 .Login__form--input{
     width: 100%;
-    padding: 13px 44px;
+    padding: 13px 12px;
     border: 1px solid #cbd5e1;
     border-radius: 50px;
     font-size: 14px;
