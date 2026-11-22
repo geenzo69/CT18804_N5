@@ -1,5 +1,5 @@
 const menu = document.getElementById("menu");
-const nav = document.querySelector("nav.mobile");
+const nav = document.querySelector(".nav-mobile");
 
 if (menu) {
     menu.addEventListener("click", (e) => {
@@ -20,22 +20,21 @@ if (menu) {
     });
 }
 
-const loginButtons = document.querySelectorAll(
-    ".login-btn"
-);
+const loginButtons = document.querySelectorAll(".login-btn");
 
-const userMenus = document.querySelectorAll(
-    ".user-menu"
-);
+const userMenus = document.querySelectorAll(".user-info");
 
 const user = localStorage.getItem("account");
 
-loginButtons.forEach((button) => {
-    button.classList.toggle("is-logged-in", user ? true : false);
-});
+try {
+    const parsed = JSON.parse(user);
 
-userMenus.forEach((menu) => {
-    menu.classList.toggle("is-logged-in", user ? true : false);
-    const data = JSON.parse(user);
-    menu.querySelector("h5").textContent = `${user.firstName} ${user.lastName}`;
-});
+    loginButtons.forEach((button) => {
+        button.classList.toggle("is-logged-in", parsed.isLoggedIn ? true : false);
+    });
+    
+    userMenus.forEach((menu) => {
+        menu.classList.toggle("is-logged-in", parsed.isLoggedIn ? true : false);
+        menu.querySelector("h5").textContent = `${parsed.firstName} ${parsed.lastName}`;
+    });
+} catch(err) {}

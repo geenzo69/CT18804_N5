@@ -15,7 +15,7 @@ main {
     min-height: 100vh;
 }
 
-header {
+.header {
     color: #178a5b;
     background-color: #ffffff;
     display: flex;
@@ -25,9 +25,10 @@ header {
     position: sticky;
     top: 0;
     border-bottom: #178a5b solid 2px;
+    z-index: 5;
 }
 
-header #menu {
+.header__menu-btn {
     border: 0;
     padding: 3px;
     width: 32px;
@@ -36,60 +37,53 @@ header #menu {
     color: #178a5b;
 }
 
-header #menu:hover {
+.header__menu-btn:hover {
     cursor: pointer;
     color: #0f6e48
 }
 
-header nav {
-    display: none;
-}
-
-.logo {
+.header__logo-img {
     height: 40px;
 }
 
-nav ul {
+.nav {
+    display: none;
+}
+
+.nav__list {
     display: flex;
     gap: 10px;
     list-style: none;
     float: right;
 }
 
-nav li {
+.nav__item {
     padding: 10px;
     white-space: nowrap;
     display: flex;
     justify-content: center;
 }
 
-nav li a {
+.nav__link {
     text-decoration: none;
     font-weight: bold;
     color: #374151;
 }
 
-nav li svg {
-    width: 18px;
-    height: 18px;
-    vertical-align: middle;
-    margin-right: 6px;
-}
-
-nav li:hover {
+.nav__item:hover {
     cursor: pointer;
     color: #0f6e48;
     background-color: #ecfdf5;
     border-radius: 5px;
 }
 
-nav li.active {
+.nav__item--active {
     color: #0f6e48;
     background-color: #dcfce7;
     border-bottom: 2px solid #178a5b;
 }
 
-nav.mobile {
+.nav-mobile {
     display: none;
     position: fixed;
     background-color: #ffffff;
@@ -98,13 +92,14 @@ nav.mobile {
     z-index: 1000;
 }
 
-nav.mobile ul {
+.nav-mobile__list {
+    display: flex;
     flex-direction: column;
     width: 100%;
     text-align: center;
 }
 
-.user-menu {
+.user-info {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,15 +109,15 @@ nav.mobile ul {
     color: #374151;
 }
 
-header .user-menu {
+.header .user-info {
     display: none;
 }
 
-header .login-btn {
+.header .login-btn {
     display: none;
 }
 
-.user-menu img {
+.user-info img {
     border-radius: 100%;
     
 }
@@ -134,11 +129,10 @@ header .login-btn {
     color: #fff;
     border-radius: 5px;
     font-weight: bold;
-    float: inline-end;
     text-decoration: none;
 }
 
-.mobile .login-btn {
+.nav-mobile .login-btn {
     margin-left: 15px;
     margin-right: 15px;
 }
@@ -154,60 +148,47 @@ header .login-btn {
     display: none;
 }
 
-.user-menu {
+.user-info {
     display: none;
 }
 
-.mobile .user-menu.is-logged-in {
+.nav-mobile .user-info.is-logged-in {
     display: flex;
 }
 
-footer {
+.footer {
     background-color: #202523;
-    color: #d1fae5;
+    color: #ffffff;
     padding: 25px;
     text-align: center;
 }
 
 @media (min-width: 688px) {
-    main > .header {
+    .header {
         flex-direction: row;
     }
 
-    main > .header > img {
-        height: 260px;
-        width: 420px;
-    }
-
-    .container img {
-        width: 250px;
-    }
-
-    header #menu {
+    .header__menu-btn {
         display: none;
     }
 
-    header nav {
+    .nav {
         display: block;
     }
 
-    header .login-btn {
+    .header .login-btn {
         display: block;
     }
 
-    header .user-menu.is-logged-in {
+    .header .login-btn.is-logged-in {
+        display: none;
+    }
+
+    .header .user-info.is-logged-in {
         display: flex;
     }
 
-    nav.mobile { 
+    .nav-mobile { 
         display: none !important;
-    }
-
-    .double {
-        display: flex;
-    }
-
-    .double .container:first-child {
-        width: 70%;
     }
 }

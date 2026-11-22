@@ -15,30 +15,30 @@
 </head>
 
 <body>
-    <header>
-        <a href="/"><img draggable="false" class="logo" src="/assets/images/logo.png" alt="Logo"></a>
-        <button id="menu">
+    <header class="header">
+        <a class="header__logo" href="/"><img class="header__logo-img" draggable="false" src="/assets/images/logo.png" alt="Logo"></a>
+        <button class="header__menu-btn" id="menu">
             <i class="fa-solid fa-bars"></i>
             <i class="fa-solid fa-x" style="display: none;"></i>
         </button>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Trang chủ</a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="/">Trang chủ</a>
                 </li>
-                <li>
-                    <a href="/lich-su-dat">Lịch sử đặt</a>
+                <li class="nav__item">
+                    <a class="nav__link" href="/lich-su-dat">Lịch sử đặt</a>
                 </li>
-                <li>
-                    <a href="/ve-chung-toi">Về chúng tôi</a>
+                <li class="nav__item">
+                    <a class="nav__link" href="/ve-chung-toi">Về chúng tôi</a>
                 </li>
             </ul>
         </nav>
 
-        <a class="login-btn" href="/">Đăng nhập</a>
-        <div class="user-menu">
+        <a class="login-btn" href="/dang-nhap">Đăng nhập</a>
+        <div class="user-info">
             <h5>Hoàng Văn A</h5>
-            <img height="32px" src="https://avatars.githubusercontent.com/u/107747605?v=4">
+            <img height="32px" src="/assets/images/user-icon.webp" draggable="false">
         </div>
     </header>
 
@@ -90,7 +90,7 @@
   </div>
     </main>
 
-    <footer>
+    <footer class="footer">
         © 2026 - Nhóm 5
     </footer>
     <script src="script.js"></script>
