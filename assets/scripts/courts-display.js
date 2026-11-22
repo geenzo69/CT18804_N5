@@ -19,7 +19,7 @@ window.courts.forEach(function(court) {
     img.alt= "Court Cover";
 
     description.className="main__navbar-desc";
-    description.textContent=court.description;
+    description.textContent=court.description.slice(0, 128) + (court.description.length > 128 ? "..." : "");
 
     pricing.className="main__navbar-desc main__navbar-prices";
 

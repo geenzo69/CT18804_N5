@@ -4,7 +4,7 @@ const form = document.querySelector(".Login__form");
 const Lstatus=document.querySelector(".Login__form--status");
 form.addEventListener("submit",function (event){
     event.preventDefault();
-    const data=localStorage.getItem("khoa");
+    const data=localStorage.getItem("account");
     const account=JSON.parse(data);
     if(account===null){
         Lstatus.textContent="No Account in Local Storage";
@@ -12,9 +12,12 @@ form.addEventListener("submit",function (event){
     }
     if(username.value===account.numberPhone && password.value === account.password){
         account.isLoggedIn=true;
-        localStorage.setItem("khoa",JSON.stringify(account));
+        localStorage.setItem("account",JSON.stringify(account));
         Lstatus.style.color="green";
         Lstatus.textContent="Login Successful";
+        setTimeout(function () {
+            window.location.href = "/";
+        }, 1500);
     }
     else{
         Lstatus.textContent="Account information not correct";

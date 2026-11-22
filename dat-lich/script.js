@@ -50,6 +50,10 @@ function renderSlots() {
     slotSelect.appendChild(option);
   }
 
+  const searchQueries = new URLSearchParams(location.search);
+
+  courtSelect.value = searchQueries.get("id") || "001";
+
   showPrice();
 }
 

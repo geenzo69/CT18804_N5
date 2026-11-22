@@ -94,55 +94,52 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-try {
-    const khoa = `account:${numberPhone}`;
-    // ktra sdt
-    if (localStorage.getItem(khoa) !== null) {
-        hienThiThongBao(
-            "Số điện thoại này đã được đăng ký!",
-            "loi"
-        );
-        soDienThoai.focus();
-        return;
-    }
+        try {
+            // ktra sdt
+            const account = JSON.parse(localStorage.getItem("account"));
 
-    // tao id va bam mk
-    const id = crypto.randomUUID();
+            if (account.numberPhone == soDienThoai) {
+                hienThiThongBao(
+                    "Số điện thoại này đã được đăng ký!",
+                    "loi"
+                );
+                soDienThoai.focus();
+                return;
+            }
 
 
-// ghi đè lên k cần xóa
-    localStorage.setItem('khoa', JSON.stringify({
-        id: id,
-        numberPhone: numberPhone,
-        firstName: firstName,
-        lastName: lastName,
-        password: password
-    }));
+            // ghi đè lên k cần xóa
+            localStorage.setItem("account", JSON.stringify({
+                numberPhone: numberPhone,
+                firstName: firstName,
+                lastName: lastName,
+                password: password
+            }));
 
-    // tb dki tcong
-    hienThiThongBao(
-        "Đăng ký thành công! Chào mừng " +
-        lastName + " " + firstName +
-        " đến với BadmintonPlus!",
-        "thanh_cong"
-    );
+            // tb dki tcong
+            hienThiThongBao(
+                "Đăng ký thành công! Chào mừng " +
+                lastName + " " + firstName +
+                " đến với BadmintonPlus!",
+                "thanh_cong"
+            );
 
-    // delete form date
-    form.reset();
+            // delete form date
+            form.reset();
 
-    // chuyen sang trang ve chung toi
-    setTimeout(function () {
-        window.location.href = form.dataset.redirect;
-    }, 1500);
+            // chuyen sang trang ve chung toi
+            setTimeout(function () {
+                window.location.href = form.dataset.redirect;
+            }, 1500);
 
-} catch (error) {
-    console.error("Lỗi đăng ký:", error);
+        } catch (error) {
+            console.error("Lỗi đăng ký:", error);
 
-    hienThiThongBao(
-        "Không thể lưu thông tin đăng ký!",
-        "loi"
-    );
-}
+            hienThiThongBao(
+                "Không thể lưu thông tin đăng ký!",
+                "loi"
+            );
+        }
 
     });
 });

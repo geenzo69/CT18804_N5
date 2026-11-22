@@ -12,10 +12,11 @@ main{
 }
 .Login__form{
     padding:20px;
-    border: solid 5px green;
+    border: 1px solid #ddd;
     margin:0 auto;
     width: 480px;
     height:300px;
+    margin-top: 25px;
 }
 .Login__form label,
 .Login__form--input,
@@ -24,11 +25,11 @@ main{
     display: block;
 }
 .Login__form--input{
-    border-radius: 10px;
-    width: 400px;
-    height: 35px;
-    padding: 10px;
-    margin: 5px;
+    width: 100%;
+    padding: 13px 44px;
+    border: 1px solid #cbd5e1;
+    border-radius: 50px;
+    font-size: 14px;
 }
 .Login__form--forgot{
     width:150px;
@@ -44,10 +45,22 @@ main{
     margin-top: 10px;
 }
 .Login__form--submit{
-    background-color: lightgreen;
-    width: 100px;
-    height: 50px;
-    border-radius: 10px;
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 50px;
+    background-color: #118c58;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.Login__form--submit:hover {
+    background-color: #085535;
 }
 .Login__form--status{
     color:red;
