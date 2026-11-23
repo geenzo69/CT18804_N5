@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // ktra sdt
             const account = JSON.parse(localStorage.getItem("account"));
 
-            if (account.numberPhone == soDienThoai) {
+            if (account && account.numberPhone === numberPhone) {
                 hienThiThongBao(
                     "Số điện thoại này đã được đăng ký!",
                     "loi"
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // delete form date
             form.reset();
 
-            // chuyen sang trang ve chung toi
+            // chuyen sang trang gioi thieu
             setTimeout(function () {
                 window.location.href = form.dataset.redirect;
             }, 1500);

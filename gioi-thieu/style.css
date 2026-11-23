@@ -19,9 +19,9 @@ a {
     100% { opacity: 1; transform: translate(-50%, 0) rotate(0); }
 }
 /* MOBILE-FIRST */
-/* BANNER */
-/* @media (min-width: 740px) { */
 
+/* @media (min-width: 740px) { */
+/* BANNER */
 .banner {
     position: relative;
     display: flex;
@@ -81,7 +81,7 @@ a {
     object-fit: cover;
 }
 
-
+/* Cau chuyen khơi nguon */
 
 .story {
     margin: 0; 
@@ -242,7 +242,7 @@ a {
     color: #ffffff;  
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);  
     font-size: 18px;        
-    font-weight: 700;      
+    font-weight: 100;      
     font-style: italic;     
     text-align: center;    
     line-height: 1.4;
@@ -409,7 +409,7 @@ a {
 }
 
 
-/* TEAM: MẶC ĐỊNH 1 CỘT DỌC TRÊN ĐIỆN THOẠI */
+/* TEAM 1 CỘT DỌC TRÊN ĐIỆN THOẠI */
 .team {
     max-width: 100%;
     margin: 40px auto;
@@ -678,9 +678,10 @@ a {
     display: block;
 }
 
-
+/* Dektop */
 
 @media (min-width: 1024px) {
+    /*  BANNER */
 .banner {
     position: relative;
     display: flex;
@@ -759,7 +760,7 @@ a {
     mask-image: linear-gradient(to right, transparent 0%, black 40%);
 }
 
-
+/* CAU CHUYEN KHOI NGUON */
 .story{
     margin: 0 40px;
     max-width: auto;
@@ -915,7 +916,7 @@ body > header {
     color: #ffffff;  
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);  
     font-size: 20px;        
-    font-weight: 700;      
+    font-weight: 100;      
     font-style: italic;     
     text-align: center;    
     line-height: 1.4;;
@@ -1099,15 +1100,9 @@ body > header {
     margin: 12px 0;
     white-space: nowrap;
 }
-/* .img_icon_stats_photo3,
-.img_icon_stats_photo2,
-.img_icon_stats_photo1 {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-} */
 
 
+/* TEAM */
 .team {
     max-width: 97%;
     margin: 50px auto;
@@ -1149,7 +1144,7 @@ body > header {
 }
 
 
-/* Tầng 1 */
+/* CHIA HINH TAM GIAC  2 TANG*/
 .nguoi1 {
      grid-column: 2 / span 2;
 }
@@ -1157,7 +1152,7 @@ body > header {
     grid-column: 4 / span 2; 
 }
 
-/* Tầng 2*/
+
 .nguoi3 { 
     grid-column: 1 / span 2;
  }
