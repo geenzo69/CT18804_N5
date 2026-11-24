@@ -1,3 +1,4 @@
+// B2404889 - Bùi Lê Quang Vinh
 const username = document.getElementById("numberPhone");
 const password = document.getElementById("password");
 const form = document.querySelector(".login__form");

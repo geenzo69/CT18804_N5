@@ -1,3 +1,4 @@
+// B2505564 - Bùi Ngọc Ý
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("form_dang_ky");

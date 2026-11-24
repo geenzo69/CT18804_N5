@@ -1,3 +1,4 @@
+// B2504801 - Hoàng Tuấn Kiệt
 // Tạo đối tượng URLSearchParams để đơn giản hoá việc lấy id
 const searchQueries = new URLSearchParams(location.search);
 

@@ -1,3 +1,4 @@
+// B2404889 - Bùi Lê Quang Vinh
 const courtsList = document.getElementById("courts-list");
 const priceFormatter = new Intl.NumberFormat("vi-VN");
 const courtItems = window.courts.map(function (court, index) {

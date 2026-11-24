@@ -1,3 +1,4 @@
+/* B2504801 - Hoàng Tuấn Kiệt */
 const menu = document.getElementById("menu");
 const nav = document.querySelector(".nav-mobile");
 
