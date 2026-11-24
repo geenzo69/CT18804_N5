@@ -1,50 +1,83 @@
-body{
-    margin: 0px auto;
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
     min-height: 100vh;
 }
-h1{
+
+.login {
+    flex: 1;
+    min-height: 0;
+    padding: 48px 16px;
+}
+
+.login__title {
+    color: #0f6e48;
+    font-size: 28px;
     text-align: center;
 }
-main{
-    display:flex;
-    align-items: center;
-    margin-top:100px;
-}
-.Login__form{
-    padding:20px;
+
+.Login__form {
+    width: 100%;
+    max-width: 440px;
+    margin: 24px auto 0;
+    padding: 24px;
     border: 1px solid #ddd;
-    margin:0 auto;
-    width: 480px;
-    height:300px;
-    margin-top: 25px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #374151;
 }
+
 .Login__form label,
 .Login__form--input,
 .Login__form--forgot,
 .Register {
     display: block;
 }
-.Login__form--input{
+
+.Login__form label {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.Login__form--input {
     width: 100%;
+    margin-bottom: 16px;
     padding: 13px 12px;
     border: 1px solid #cbd5e1;
     border-radius: 50px;
     font-size: 14px;
 }
-.Login__form--forgot{
-    width:150px;
+
+.Login__form--input:focus-visible {
+    outline: 2px solid #178a5b;
+    outline-offset: 2px;
+}
+
+.Login__form--forgot,
+.Register {
+    color: #0f6e48;
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.Login__form--forgot {
+    margin-bottom: 16px;
     text-align: right;
-    padding:5px;
-    text-decoration: none;
 }
-.Register{
-    width:175px;
-    text-align: left;
-    padding:5px;
-    text-decoration: none;
-    margin-top: 10px;
+
+.Register {
+    margin-top: 16px;
+    text-align: center;
 }
-.Login__form--submit{
+
+.Login__form--forgot:hover,
+.Register:hover {
+    text-decoration: underline;
+}
+
+.Login__form--submit {
     width: 100%;
     padding: 13px;
     border: none;
@@ -54,21 +87,19 @@ main{
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
 }
+
 .Login__form--submit:hover {
     background-color: #085535;
 }
-.Login__form--status{
-    color:red;
-    margin-bottom: 5px;
+
+.Login__form--status {
+    margin-bottom: 12px;
+    color: red;
+    font-size: 14px;
+    overflow-wrap: anywhere;
 }
-@media screen and (max-width:600px) {
-    main{
-        position:sticky;
-        top:100px;
-    }
+
+.Login__form--status:empty {
+    display: none;
 }

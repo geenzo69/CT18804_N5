@@ -61,56 +61,14 @@
     </nav>
 
     <main class="main">
-        <div class="main__flex-left">
-            <article class="main__left-article">
-                <h2>Cầu lông là một môn thể thao!</h2>
-                <p>Cầu lông là môn thể thao dùng vợt, được chơi giữa hai người (đánh đơn) hoặc hai cặp đấu (đánh đôi).</p>
-                <p>Mục tiêu rất đơn giản: đánh quả cầu qua lưới sao cho nó rơi vào phần sân của đối phương.</p>
-                <p>Dù trông có vẻ đơn giản, nhưng cầu lông đòi hỏi người chơi phải có tốc độ, sự chính xác, khả năng phối hợp và chiến thuật.</p>
-                <p>Dù chơi giải trí cùng bạn bè hay thi đấu ở cấp độ quốc tế, cầu lông vẫn là môn thể thao kết hợp hài hòa giữa niềm vui và thử thách thể chất.</p>
-            </article>
-        </div>
-        <div class="main__flex-middle">
-            <ul class="main__navbar" id="courts-list">
-                <script src="/assets/scripts/courts-display.js"></script>
-            </ul>
-        </div>
-        <div class="main__flex-right">
-            <article class="main__right-tips">
-                <h2>Badminton Tips</h2>
-                <section class="main__tips">
-                    <p>Hãy khởi động trước khi chơi.</p>
-                    <img class="main__tips--images" src="images/PregameWarmUp.jpg" alt="WarmUp">
-                </section>
-                <section class="main__tips">
-                    <p>Hãy giữ tay cầm vợt một cách thoải mái.</p>
-                    <img class="main__tips--images" src="images/BadmintonGrip.jpg" alt="Grip">
-                </section>
-                <section class="main__tips">
-                    <p>Quay trở lại vị trí trung tâm sau mỗi lần đánh.</p>
-                    <img class="main__tips--images" src="images/CenterStrat.jpg" alt="CenterStrat">
-                </section>
-                <section class="main__tips">
-                    <p>Hãy quan sát các chuyển động của đối thủ.</p>
-                    <img class="main__tips--images" src="images/Watcher.jpg" alt="Concentrate">
-                </section>
-            </article>
-            <article class="main__right-article">
-                <h2>Một vài điều thú vị về cầu lông:</h2>
-                <section class="main__right-article-funfact">
-                    <p>1. Cầu lông có tốc độ đáng kinh ngạc: Trong các giải đấu chuyên nghiệp và các bài kiểm tra tốc độ, một cú đập cầu đã được ghi nhận với vận tốc hơn 500 km/h.</p>
-                    <img class="main__right-article-image" src="images/fastestbadminton.jpg" alt="FastBadminton">
-                </section>
-                <section class="main__right-article-funfact">
-                    <p>2. Quả cầu lông không bay giống như các loại bóng: Thiết kế khí động học khiến chúng giảm tốc độ nhanh chóng sau khi bị đánh, tạo nên phong cách chơi đặc trưng của môn cầu lông.</p>
-                    <img class="main__right-article-image" src="images/weirdshuttleco.jpg" alt="Shuttlecocks are not balls">
-                </section>
-            </article>
-        </div>
+        <section class="courts" aria-labelledby="courts-title">
+            <h1 class="courts__title" id="courts-title">Sân cầu lông</h1>
+            <ul class="courts__list" id="courts-list"></ul>
+            <script src="/assets/scripts/courts-display.js"></script>
+        </section>
     </main>
     <footer class="footer">
         © 2026 - Nhóm 5
     </footer>
-    <script src="/login/scripts/authenticate.js"></script>
 </body>
 </html>

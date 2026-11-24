@@ -1,45 +1,53 @@
-const List=document.getElementById("courts-list");
-window.courts.forEach(function(court) {
-    let li= document.createElement("li");
-    let a = document.createElement("a");
-    let img = document.createElement("img");
-    let name =  document.createElement("h3");
-    let description =  document.createElement("p");
-    let pricing = document.createElement("p");
-    let address = document.createElement("p");
-    let hotline = document.createElement("p");
-    a.className = "main__navbar-info";
-    a.href = "/san/index.html?id=" + court.id;
+const courtsList = document.getElementById("courts-list");
+const priceFormatter = new Intl.NumberFormat("vi-VN");
+const courtItems = window.courts.map(function (court, index) {
+    const item = document.createElement("li");
+    const article = document.createElement("article");
+    const link = document.createElement("a");
+    const cover = document.createElement("img");
+    const body = document.createElement("div");
+    const name = document.createElement("h2");
+    const address = document.createElement("p");
+    const hours = document.createElement("p");
+    const footer = document.createElement("div");
+    const price = document.createElement("p");
+    const action = document.createElement("span");
+    const prices = court.pricing.map(function (slot) {
+        return slot.price;
+    });
+    const minPrice = priceFormatter.format(Math.min(...prices));
+    const maxPrice = priceFormatter.format(Math.max(...prices));
 
-    name.className="main__navbar-desc";
-    name.textContent=court.name;
+    item.className = "courts__item";
+    article.className = "court-item";
+    link.className = "court-item__link";
+    link.href = "/san/index.html?id=" + court.id;
+    cover.className = "court-item__cover";
+    cover.src = court.cover;
+    cover.alt = court.name;
+    cover.width = 640;
+    cover.height = 400;
+    cover.loading = index < 3 ? "eager" : "lazy";
+    body.className = "court-item__body";
+    name.className = "court-item__name";
+    name.textContent = court.name;
+    address.className = "court-item__address";
+    address.textContent = court.address;
+    hours.className = "court-item__hours";
+    hours.textContent = "Thời gian hoạt động: " + court.pricing[0].startedAt + " - " + court.pricing[court.pricing.length - 1].endedAt;
+    footer.className = "court-item__footer";
+    price.className = "court-item__price";
+    price.textContent = (minPrice === maxPrice ? minPrice : minPrice + " - " + maxPrice) + " đ";
+    action.className = "court-item__action";
+    action.textContent = "Xem sân";
 
-    img.className="main__navbar--images";
-    img.src= court.cover;
-    img.alt= "Court Cover";
+    footer.append(price, action);
+    body.append(name, address, hours, footer);
+    link.append(cover, body);
+    article.append(link);
+    item.append(article);
 
-    description.className="main__navbar-desc";
-    description.textContent=court.description.slice(0, 128) + (court.description.length > 128 ? "..." : "");
-
-    pricing.className="main__navbar-desc main__navbar-prices";
-
-    address.style="text-align:center";
-    address.textContent="Address: "+court.address;
-
-    hotline.style="text-align:center";
-    hotline.textContent="Hotline: "+court.hotline;
-    let PText = "";
-    for (let i = 0; i < court.pricing.length; i++) {
-        let price = court.pricing[i];
-        PText += price.startedAt + " - " + price.endedAt + ": " + price.price + " VND\n";
-    }
-    pricing.textContent=PText;
-    a.appendChild(img);
-    a.appendChild(name);
-    a.appendChild(description);
-    a.appendChild(address);
-    a.appendChild(hotline);
-    a.appendChild(pricing);
-    li.appendChild(a);
-    List.appendChild(li);
+    return item;
 });
+
+courtsList.replaceChildren(...courtItems);
