@@ -17,7 +17,7 @@ body {
     text-align: center;
 }
 
-.Login__form {
+.login__form {
     width: 100%;
     max-width: 440px;
     margin: 24px auto 0;
@@ -28,19 +28,19 @@ body {
     color: #374151;
 }
 
-.Login__form label,
-.Login__form--input,
-.Login__form--forgot,
-.Register {
+.login__form label,
+.login__input,
+.login__forgot,
+.login__register {
     display: block;
 }
 
-.Login__form label {
+.login__form label {
     margin-bottom: 8px;
     font-size: 14px;
 }
 
-.Login__form--input {
+.login__input {
     width: 100%;
     margin-bottom: 16px;
     padding: 13px 12px;
@@ -49,35 +49,35 @@ body {
     font-size: 14px;
 }
 
-.Login__form--input:focus-visible {
+.login__input:focus-visible {
     outline: 2px solid #178a5b;
     outline-offset: 2px;
 }
 
-.Login__form--forgot,
-.Register {
+.login__forgot,
+.login__register {
     color: #0f6e48;
     font-size: 14px;
     line-height: 1.5;
     text-decoration: none;
 }
 
-.Login__form--forgot {
+.login__forgot {
     margin-bottom: 16px;
     text-align: right;
 }
 
-.Register {
+.login__register {
     margin-top: 16px;
     text-align: center;
 }
 
-.Login__form--forgot:hover,
-.Register:hover {
+.login__forgot:hover,
+.login__register:hover {
     text-decoration: underline;
 }
 
-.Login__form--submit {
+.login__submit {
     width: 100%;
     padding: 13px;
     border: none;
@@ -89,17 +89,17 @@ body {
     cursor: pointer;
 }
 
-.Login__form--submit:hover {
+.login__submit:hover {
     background-color: #085535;
 }
 
-.Login__form--status {
+.login__status {
     margin-bottom: 12px;
     color: red;
     font-size: 14px;
     overflow-wrap: anywhere;
 }
 
-.Login__form--status:empty {
+.login__status:empty {
     display: none;
 }
