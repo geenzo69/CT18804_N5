@@ -9,6 +9,10 @@ const slotSelect = document.getElementById("slot");
 const priceText = document.getElementById("price");
 const message = document.getElementById("message");
 
+const searchQueries = new URLSearchParams(location.search);
+
+courtSelect.value = searchQueries.get("id") || "001";
+
 function showMessage(text, type) {
   message.textContent = text;
   message.className = type;
@@ -49,10 +53,6 @@ function renderSlots() {
     option.dataset.price = court.pricing[i].price;
     slotSelect.appendChild(option);
   }
-
-  const searchQueries = new URLSearchParams(location.search);
-
-  courtSelect.value = searchQueries.get("id") || "001";
 
   showPrice();
 }

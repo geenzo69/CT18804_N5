@@ -35,6 +35,6 @@ try {
     
     userMenus.forEach((menu) => {
         menu.classList.toggle("is-logged-in", parsed.isLoggedIn ? true : false);
-        menu.querySelector("h5").textContent = `${parsed.firstName} ${parsed.lastName}`;
+        menu.querySelector("h5").textContent = `${parsed.lastName} ${parsed.firstName}`;
     });
 } catch(err) {}
